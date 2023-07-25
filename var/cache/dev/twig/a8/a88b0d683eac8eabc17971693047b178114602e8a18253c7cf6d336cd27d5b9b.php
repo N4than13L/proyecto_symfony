@@ -169,7 +169,10 @@ class __TwigTemplate_d2e2eb9d2a5e7e65289a42f3f985b6bfa6328dbfdf66a4a91eadf282944
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("tasks");
         echo "\">Inicio</a></li>
                 <li><a href=\"#\">Tareas</a></li>
-                <li><a href=\"#\">Login</a></li>
+                <li><a href=\"";
+        // line 23
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("login");
+        echo "\">Login</a></li>
                 <li><a href=\"";
         // line 24
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("register");
@@ -211,7 +214,7 @@ class __TwigTemplate_d2e2eb9d2a5e7e65289a42f3f985b6bfa6328dbfdf66a4a91eadf282944
 
     public function getDebugInfo()
     {
-        return array (  190 => 30,  175 => 24,  169 => 21,  164 => 18,  154 => 17,  144 => 14,  142 => 13,  132 => 12,  119 => 8,  109 => 7,  90 => 5,  78 => 31,  76 => 30,  73 => 29,  71 => 17,  67 => 15,  65 => 12,  61 => 10,  59 => 7,  54 => 5,  48 => 1,);
+        return array (  193 => 30,  178 => 24,  174 => 23,  169 => 21,  164 => 18,  154 => 17,  144 => 14,  142 => 13,  132 => 12,  119 => 8,  109 => 7,  90 => 5,  78 => 31,  76 => 30,  73 => 29,  71 => 17,  67 => 15,  65 => 12,  61 => 10,  59 => 7,  54 => 5,  48 => 1,);
     }
 
     public function getSourceContext()
@@ -238,7 +241,7 @@ class __TwigTemplate_d2e2eb9d2a5e7e65289a42f3f985b6bfa6328dbfdf66a4a91eadf282944
             <ul id=\"menu\">
                 <li><a href=\"{{ path('tasks') }}\">Inicio</a></li>
                 <li><a href=\"#\">Tareas</a></li>
-                <li><a href=\"#\">Login</a></li>
+                <li><a href=\"{{ path('login') }}\">Login</a></li>
                 <li><a href=\"{{ path('register') }}\">Registro</a></li>
             </ul>
             </div>

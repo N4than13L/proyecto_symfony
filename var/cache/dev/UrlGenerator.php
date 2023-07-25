@@ -18,4 +18,6 @@ return [
     'app_user' => [[], ['_controller' => 'App\\Controller\\UserController::register'], [], [['text', '/user']], [], []],
     'tasks' => [[], ['_controller' => 'App\\Controller\\TaskController::index'], [], [['text', '/']], [], []],
     'register' => [[], ['_controller' => 'App\\Controller\\UserController::register'], [], [['text', '/registro']], [], []],
+    'login' => [[], ['_controller' => 'App\\Controller\\UserController::login'], [], [['text', '/login']], [], []],
+    'logout' => [[], [], [], [['text', '/logout']], [], []],
 ];

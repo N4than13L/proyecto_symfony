@@ -16,6 +16,8 @@ return [
         '/user' => [[['_route' => 'app_user', '_controller' => 'App\\Controller\\UserController::register'], null, null, null, false, false, null]],
         '/' => [[['_route' => 'tasks', '_controller' => 'App\\Controller\\TaskController::index'], null, null, null, false, false, null]],
         '/registro' => [[['_route' => 'register', '_controller' => 'App\\Controller\\UserController::register'], null, null, null, false, false, null]],
+        '/login' => [[['_route' => 'login', '_controller' => 'App\\Controller\\UserController::login'], null, null, null, false, false, null]],
+        '/logout' => [[['_route' => 'logout'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'
