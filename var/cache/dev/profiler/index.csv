@@ -53,3 +53,4 @@ d88872,::1,GET,http://localhost/proyecto-symfony/public/registro,1690300076,416a
 4cf048,::1,POST,http://localhost/proyecto-symfony/public/registro,1690300128,,200
 83e2ed,::1,POST,http://localhost/proyecto-symfony/public/registro,1690300277,,302
 568f54,::1,GET,http://localhost/proyecto-symfony/public/tasks,1690300277,,200
+c4e586,::1,GET,http://localhost/proyecto-symfony/public/registro,1690300784,,200

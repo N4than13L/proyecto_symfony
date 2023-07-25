@@ -29,7 +29,7 @@ class UserController extends AbstractController
         $form->handleRequest($request);
 
         // comprobar si se envio.
-        if ($form->isSubmitted()) {
+        if ($form->isSubmitted() && $form->isValid()) {
             // modificar propiedad a la hora de enviar.
             $dateNow = new DateTime();
             $dateNow->format('d-m-y H:i:s');
