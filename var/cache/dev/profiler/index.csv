@@ -39,3 +39,17 @@ eca7b0,::1,GET,http://localhost/proyecto-symfony/public/tasks,1690229730,,200
 182432,::1,GET,http://localhost/proyecto-symfony/public/tasks,1690229732,,200
 1eacff,::1,GET,http://localhost/proyecto-symfony/public/tasks,1690229732,,200
 0933c3,::1,GET,http://localhost/proyecto-symfony/public/tasks,1690229735,,200
+f78c8f,::1,GET,http://localhost/proyecto-symfony/public/,1690295133,,404
+ee3cae,::1,GET,http://localhost/proyecto-symfony/public/registro,1690295138,,200
+ff4498,::1,GET,http://localhost/proyecto-symfony/public/registro,1690296023,,200
+74645e,::1,GET,http://localhost/proyecto-symfony/public/registro,1690296102,,200
+56db86,::1,GET,http://localhost/proyecto-symfony/public/registro,1690296201,,200
+1635e2,::1,POST,http://localhost/proyecto-symfony/public/registro,1690296214,,200
+fa922f,::1,POST,http://localhost/proyecto-symfony/public/registro,1690296896,,200
+788da2,::1,GET,http://localhost/proyecto-symfony/public/registro,1690300022,ba7461,500
+ba7461,::1,POST,http://localhost/proyecto-symfony/public/registro,1690300022,,500
+d88872,::1,GET,http://localhost/proyecto-symfony/public/registro,1690300076,416a2d,500
+416a2d,::1,POST,http://localhost/proyecto-symfony/public/registro,1690300076,,500
+4cf048,::1,POST,http://localhost/proyecto-symfony/public/registro,1690300128,,200
+83e2ed,::1,POST,http://localhost/proyecto-symfony/public/registro,1690300277,,302
+568f54,::1,GET,http://localhost/proyecto-symfony/public/tasks,1690300277,,200

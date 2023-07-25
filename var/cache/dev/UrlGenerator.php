@@ -15,6 +15,7 @@ return [
     '_profiler_router' => [['token'], ['_controller' => 'web_profiler.controller.router::panelAction'], [], [['text', '/router'], ['variable', '/', '[^/]++', 'token'], ['text', '/_profiler']], [], []],
     '_profiler_exception' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::body'], [], [['text', '/exception'], ['variable', '/', '[^/]++', 'token'], ['text', '/_profiler']], [], []],
     '_profiler_exception_css' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::stylesheet'], [], [['text', '/exception.css'], ['variable', '/', '[^/]++', 'token'], ['text', '/_profiler']], [], []],
-    'app_user' => [[], ['_controller' => 'App\\Controller\\UserController::index'], [], [['text', '/user']], [], []],
+    'app_user' => [[], ['_controller' => 'App\\Controller\\UserController::register'], [], [['text', '/user']], [], []],
     'tasks' => [[], ['_controller' => 'App\\Controller\\TaskController::index'], [], [['text', '/tasks']], [], []],
+    'register' => [[], ['_controller' => 'App\\Controller\\UserController::register'], [], [['text', '/registro']], [], []],
 ];
