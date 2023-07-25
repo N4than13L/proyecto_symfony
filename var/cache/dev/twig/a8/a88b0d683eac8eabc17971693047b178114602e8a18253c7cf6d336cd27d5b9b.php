@@ -30,6 +30,7 @@ class __TwigTemplate_d2e2eb9d2a5e7e65289a42f3f985b6bfa6328dbfdf66a4a91eadf282944
             'title' => [$this, 'block_title'],
             'stylesheets' => [$this, 'block_stylesheets'],
             'javascripts' => [$this, 'block_javascripts'],
+            'header' => [$this, 'block_header'],
             'body' => [$this, 'block_body'],
         ];
     }
@@ -52,12 +53,13 @@ class __TwigTemplate_d2e2eb9d2a5e7e65289a42f3f985b6bfa6328dbfdf66a4a91eadf282944
         // line 5
         $this->displayBlock('title', $context, $blocks);
         echo "</title>
+        
         ";
-        // line 8
-        echo "        ";
+        // line 7
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 11
-        echo "
+        // line 10
+        echo "        
+
         ";
         // line 12
         $this->displayBlock('javascripts', $context, $blocks);
@@ -66,8 +68,13 @@ class __TwigTemplate_d2e2eb9d2a5e7e65289a42f3f985b6bfa6328dbfdf66a4a91eadf282944
     <body>
         ";
         // line 17
+        $this->displayBlock('header', $context, $blocks);
+        // line 29
+        echo "
+        ";
+        // line 30
         $this->displayBlock('body', $context, $blocks);
-        // line 18
+        // line 31
         echo "    </body>
 </html>
 ";
@@ -98,7 +105,7 @@ class __TwigTemplate_d2e2eb9d2a5e7e65289a42f3f985b6bfa6328dbfdf66a4a91eadf282944
 
     }
 
-    // line 8
+    // line 7
     public function block_stylesheets($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -108,10 +115,11 @@ class __TwigTemplate_d2e2eb9d2a5e7e65289a42f3f985b6bfa6328dbfdf66a4a91eadf282944
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
 
-        // line 9
-        echo "            ";
-        // line 10
-        echo "        ";
+        // line 8
+        echo "            <link href=\"";
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/styles/styles.css"), "html", null, true);
+        echo "\" type=\"text/css\" rel=\"stylesheet\" />
+        ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -143,6 +151,42 @@ class __TwigTemplate_d2e2eb9d2a5e7e65289a42f3f985b6bfa6328dbfdf66a4a91eadf282944
     }
 
     // line 17
+    public function block_header($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "header"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "header"));
+
+        // line 18
+        echo "        <div id=\"header\">
+            <h1>Tareas symfony</h1>
+            <ul id=\"menu\">
+                <li><a href=\"";
+        // line 21
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("tasks");
+        echo "\">Inicio</a></li>
+                <li><a href=\"#\">Tareas</a></li>
+                <li><a href=\"#\">Login</a></li>
+                <li><a href=\"";
+        // line 24
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("register");
+        echo "\">Registro</a></li>
+            </ul>
+            </div>
+            <div class=\"clearfix\"></div>
+        ";
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+    }
+
+    // line 30
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -167,7 +211,7 @@ class __TwigTemplate_d2e2eb9d2a5e7e65289a42f3f985b6bfa6328dbfdf66a4a91eadf282944
 
     public function getDebugInfo()
     {
-        return array (  146 => 17,  136 => 14,  134 => 13,  124 => 12,  114 => 10,  112 => 9,  102 => 8,  83 => 5,  71 => 18,  69 => 17,  65 => 15,  63 => 12,  60 => 11,  57 => 8,  53 => 5,  47 => 1,);
+        return array (  190 => 30,  175 => 24,  169 => 21,  164 => 18,  154 => 17,  144 => 14,  142 => 13,  132 => 12,  119 => 8,  109 => 7,  90 => 5,  78 => 31,  76 => 30,  73 => 29,  71 => 17,  67 => 15,  65 => 12,  61 => 10,  59 => 7,  54 => 5,  48 => 1,);
     }
 
     public function getSourceContext()
@@ -177,17 +221,30 @@ class __TwigTemplate_d2e2eb9d2a5e7e65289a42f3f985b6bfa6328dbfdf66a4a91eadf282944
     <head>
         <meta charset=\"UTF-8\">
         <title>{% block title %}Welcome!{% endblock %}</title>
-        {# Run `composer require symfony/webpack-encore-bundle`
-           and uncomment the following Encore helpers to start using Symfony UX #}
+        
         {% block stylesheets %}
-            {#{{ encore_entry_link_tags('app') }}#}
+            <link href=\"{{asset('assets/styles/styles.css')}}\" type=\"text/css\" rel=\"stylesheet\" />
         {% endblock %}
+        
 
         {% block javascripts %}
             {#{{ encore_entry_script_tags('app') }}#}
         {% endblock %}
     </head>
     <body>
+        {% block header %}
+        <div id=\"header\">
+            <h1>Tareas symfony</h1>
+            <ul id=\"menu\">
+                <li><a href=\"{{ path('tasks') }}\">Inicio</a></li>
+                <li><a href=\"#\">Tareas</a></li>
+                <li><a href=\"#\">Login</a></li>
+                <li><a href=\"{{ path('register') }}\">Registro</a></li>
+            </ul>
+            </div>
+            <div class=\"clearfix\"></div>
+        {% endblock %}
+
         {% block body %}{% endblock %}
     </body>
 </html>

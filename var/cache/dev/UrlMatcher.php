@@ -14,7 +14,7 @@ return [
         '/_profiler/phpinfo' => [[['_route' => '_profiler_phpinfo', '_controller' => 'web_profiler.controller.profiler::phpinfoAction'], null, null, null, false, false, null]],
         '/_profiler/open' => [[['_route' => '_profiler_open_file', '_controller' => 'web_profiler.controller.profiler::openAction'], null, null, null, false, false, null]],
         '/user' => [[['_route' => 'app_user', '_controller' => 'App\\Controller\\UserController::register'], null, null, null, false, false, null]],
-        '/tasks' => [[['_route' => 'tasks', '_controller' => 'App\\Controller\\TaskController::index'], null, null, null, false, false, null]],
+        '/' => [[['_route' => 'tasks', '_controller' => 'App\\Controller\\TaskController::index'], null, null, null, false, false, null]],
         '/registro' => [[['_route' => 'register', '_controller' => 'App\\Controller\\UserController::register'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
