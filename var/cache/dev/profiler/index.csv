@@ -512,3 +512,17 @@ d886c7,::1,GET,http://localhost/proyecto-symfony/public/tarea/6,1690410810,,200
 f0d8c5,::1,GET,http://localhost/proyecto-symfony/public/tareas,1690410812,,200
 8991cd,::1,GET,http://localhost/proyecto-symfony/public/logout,1690410817,,302
 592f77,::1,GET,http://localhost/proyecto-symfony/public/,1690410817,,200
+90a246,::1,GET,http://localhost/proyecto-symfony/public/,1690412729,,200
+e2cc24,::1,POST,http://localhost/proyecto-symfony/public/,1690412738,,302
+4a4def,::1,GET,http://localhost/proyecto-symfony/public/,1690412739,,200
+8804f0,::1,GET,http://localhost/proyecto-symfony/public/crear-tarea,1690412741,442ab4,500
+442ab4,::1,GET,http://localhost/proyecto-symfony/public/crear-tarea,1690412741,,500
+d01dcd,::1,GET,http://localhost/proyecto-symfony/public/tareas,1690412744,,200
+6bb656,::1,GET,http://localhost/proyecto-symfony/public/tarea/6,1690412805,,200
+ea30d8,::1,GET,http://localhost/proyecto-symfony/public/crear-tarea,1690412841,2495ec,500
+2495ec,::1,GET,http://localhost/proyecto-symfony/public/crear-tarea,1690412841,,500
+7066db,::1,GET,http://localhost/proyecto-symfony/public/mis-tareas,1690412843,,200
+8ee123,::1,GET,http://localhost/proyecto-symfony/public/crear-tarea,1690412844,463a02,500
+463a02,::1,GET,http://localhost/proyecto-symfony/public/crear-tarea,1690412844,,500
+b21a96,::1,GET,http://localhost/proyecto-symfony/public/crear-tarea,1690412910,,200
+71ce38,::1,GET,http://localhost/proyecto-symfony/public/mis-tareas,1690412938,,200

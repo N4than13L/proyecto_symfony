@@ -2,7 +2,7 @@
 
 {% block title %}
 
-{% if edit %}
+{% if edit is defined %}
 Editar Tareas
 {% else %}
 Crear Tareas
@@ -18,7 +18,7 @@ Crear Tareas
 
 <div class="example-wrapper">
     <h2>
-{% if edit %}
+{% if edit  is defined %}
 Editar Tareas
 {% else %}
 Crear Tareas

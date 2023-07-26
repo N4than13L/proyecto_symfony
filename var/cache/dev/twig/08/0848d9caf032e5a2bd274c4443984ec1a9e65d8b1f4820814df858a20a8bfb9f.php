@@ -69,7 +69,7 @@ class __TwigTemplate_d211e6e1467f3e3822e2288ed58521be5a3607c10a99504060a08105605
         echo "
 ";
         // line 5
-        if ((isset($context["edit"]) || array_key_exists("edit", $context) ? $context["edit"] : (function () { throw new RuntimeError('Variable "edit" does not exist.', 5, $this->source); })())) {
+        if (array_key_exists("edit", $context)) {
             // line 6
             echo "Editar Tareas
 ";
@@ -109,7 +109,7 @@ class __TwigTemplate_d211e6e1467f3e3822e2288ed58521be5a3607c10a99504060a08105605
     <h2>
 ";
         // line 21
-        if ((isset($context["edit"]) || array_key_exists("edit", $context) ? $context["edit"] : (function () { throw new RuntimeError('Variable "edit" does not exist.', 21, $this->source); })())) {
+        if (array_key_exists("edit", $context)) {
             // line 22
             echo "Editar Tareas
 ";
@@ -165,7 +165,7 @@ class __TwigTemplate_d211e6e1467f3e3822e2288ed58521be5a3607c10a99504060a08105605
 
 {% block title %}
 
-{% if edit %}
+{% if edit is defined %}
 Editar Tareas
 {% else %}
 Crear Tareas
@@ -181,7 +181,7 @@ Crear Tareas
 
 <div class=\"example-wrapper\">
     <h2>
-{% if edit %}
+{% if edit  is defined %}
 Editar Tareas
 {% else %}
 Crear Tareas
