@@ -52,7 +52,6 @@ class UserController extends AbstractController
             return $this->redirectToRoute('tasks');
         }
 
-
         return $this->render('user/register.html.twig', [
             // devolverlos para poder imprimirlos en la vista.
             'form' => $form->createView()

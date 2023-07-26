@@ -103,26 +103,14 @@ class __TwigTemplate_492c226bf30d8133bda1e145e12b07f8cf32a5dfeb48997b54fc397dbfb
         }
         // line 15
         echo "
-
-    ";
-        // line 17
-        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 17, $this->source); })()), "user", [], "any", false, false, false, 17)) {
-            // line 18
-            echo "        ";
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\DumpExtension']->dump($this->env, $context, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 18, $this->source); })()), "user", [], "any", false, false, false, 18));
-            echo "
-    ";
-        }
-        // line 20
-        echo "
    <form action=\"";
-        // line 21
+        // line 16
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("login");
         echo "\" method=\"POST\">
    <label for=\"username\">Email</label>
    <input type=\"text\" id=\"user\" name=\"_username\" value=\"";
-        // line 23
-        echo twig_escape_filter($this->env, (isset($context["lastUserName"]) || array_key_exists("lastUserName", $context) ? $context["lastUserName"] : (function () { throw new RuntimeError('Variable "lastUserName" does not exist.', 23, $this->source); })()), "html", null, true);
+        // line 18
+        echo twig_escape_filter($this->env, (isset($context["lastUserName"]) || array_key_exists("lastUserName", $context) ? $context["lastUserName"] : (function () { throw new RuntimeError('Variable "lastUserName" does not exist.', 18, $this->source); })()), "html", null, true);
         echo "\"/>
 
    <label for=\"password\">Contraseña</label>
@@ -155,7 +143,7 @@ class __TwigTemplate_492c226bf30d8133bda1e145e12b07f8cf32a5dfeb48997b54fc397dbfb
 
     public function getDebugInfo()
     {
-        return array (  125 => 23,  120 => 21,  117 => 20,  111 => 18,  109 => 17,  105 => 15,  99 => 12,  96 => 11,  94 => 10,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  113 => 18,  108 => 16,  105 => 15,  99 => 12,  96 => 11,  94 => 10,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -173,11 +161,6 @@ class __TwigTemplate_492c226bf30d8133bda1e145e12b07f8cf32a5dfeb48997b54fc397dbfb
         <div class=\"error\">
             {{error.messageKey|trans(error.messageData, 'security')}}
         </div>
-    {% endif %}
-
-
-    {% if app.user %}
-        {{dump(app.user)}}
     {% endif %}
 
    <form action=\"{{ path( 'login' ) }}\" method=\"POST\">

@@ -69,12 +69,12 @@ class __TwigTemplate_d2e2eb9d2a5e7e65289a42f3f985b6bfa6328dbfdf66a4a91eadf282944
         ";
         // line 17
         $this->displayBlock('header', $context, $blocks);
-        // line 29
+        // line 47
         echo "
         ";
-        // line 30
+        // line 48
         $this->displayBlock('body', $context, $blocks);
-        // line 31
+        // line 51
         echo "    </body>
 </html>
 ";
@@ -164,21 +164,57 @@ class __TwigTemplate_d2e2eb9d2a5e7e65289a42f3f985b6bfa6328dbfdf66a4a91eadf282944
         echo "        <div id=\"header\">
             <h1>Tareas symfony</h1>
             <ul id=\"menu\">
-                <li><a href=\"";
-        // line 21
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("tasks");
-        echo "\">Inicio</a></li>
-                <li><a href=\"#\">Tareas</a></li>
-                <li><a href=\"";
+               
+
+            ";
         // line 23
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("login");
-        echo "\">Login</a></li>
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 23, $this->source); })()), "user", [], "any", false, false, false, 23)) {
+            // line 24
+            echo "                <li><a href=\"";
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("tasks");
+            echo "\">Inicio</a></li>
+                <li><a href=\"#\">Mis tareas</a></li>
+
+<li class=\"right\"><a href=\"";
+            // line 27
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("logout");
+            echo "\">Cerrar cesión</a></li>
+                <li class=\"right\"><a href=\"#\">";
+            // line 28
+            echo twig_escape_filter($this->env, ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 28, $this->source); })()), "user", [], "any", false, false, false, 28), "name", [], "any", false, false, false, 28) . " ") . twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 28, $this->source); })()), "user", [], "any", false, false, false, 28), "surname", [], "any", false, false, false, 28)), "html", null, true);
+            echo "</a></li>
+
+                
+                    
+            ";
+        } else {
+            // line 33
+            echo "                <li><a href=\"";
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("login");
+            echo "\">Login</a></li>
                 <li><a href=\"";
-        // line 24
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("register");
-        echo "\">Registro</a></li>
+            // line 34
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("register");
+            echo "\">Registro</a></li>
+            ";
+        }
+        // line 36
+        echo "
             </ul>
             </div>
+            
+   ";
+        // line 40
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 40, $this->source); })()), "user", [], "any", false, false, false, 40)) {
+            // line 41
+            echo "        ";
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\DumpExtension']->dump($this->env, $context, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 41, $this->source); })()), "user", [], "any", false, false, false, 41));
+            echo "
+    ";
+        }
+        // line 43
+        echo "    
+
             <div class=\"clearfix\"></div>
         ";
         
@@ -189,7 +225,7 @@ class __TwigTemplate_d2e2eb9d2a5e7e65289a42f3f985b6bfa6328dbfdf66a4a91eadf282944
 
     }
 
-    // line 30
+    // line 48
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -199,6 +235,9 @@ class __TwigTemplate_d2e2eb9d2a5e7e65289a42f3f985b6bfa6328dbfdf66a4a91eadf282944
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
+        // line 49
+        echo "        
+        ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -214,7 +253,7 @@ class __TwigTemplate_d2e2eb9d2a5e7e65289a42f3f985b6bfa6328dbfdf66a4a91eadf282944
 
     public function getDebugInfo()
     {
-        return array (  193 => 30,  178 => 24,  174 => 23,  169 => 21,  164 => 18,  154 => 17,  144 => 14,  142 => 13,  132 => 12,  119 => 8,  109 => 7,  90 => 5,  78 => 31,  76 => 30,  73 => 29,  71 => 17,  67 => 15,  65 => 12,  61 => 10,  59 => 7,  54 => 5,  48 => 1,);
+        return array (  239 => 49,  229 => 48,  216 => 43,  210 => 41,  208 => 40,  202 => 36,  197 => 34,  192 => 33,  184 => 28,  180 => 27,  173 => 24,  171 => 23,  164 => 18,  154 => 17,  144 => 14,  142 => 13,  132 => 12,  119 => 8,  109 => 7,  90 => 5,  78 => 51,  76 => 48,  73 => 47,  71 => 17,  67 => 15,  65 => 12,  61 => 10,  59 => 7,  54 => 5,  48 => 1,);
     }
 
     public function getSourceContext()
@@ -239,16 +278,36 @@ class __TwigTemplate_d2e2eb9d2a5e7e65289a42f3f985b6bfa6328dbfdf66a4a91eadf282944
         <div id=\"header\">
             <h1>Tareas symfony</h1>
             <ul id=\"menu\">
+               
+
+            {% if app.user %}
                 <li><a href=\"{{ path('tasks') }}\">Inicio</a></li>
-                <li><a href=\"#\">Tareas</a></li>
+                <li><a href=\"#\">Mis tareas</a></li>
+
+<li class=\"right\"><a href=\"{{ path('logout')}}\">Cerrar cesión</a></li>
+                <li class=\"right\"><a href=\"#\">{{app.user.name ~ ' ' ~ app.user.surname}}</a></li>
+
+                
+                    
+            {% else %}
                 <li><a href=\"{{ path('login') }}\">Login</a></li>
                 <li><a href=\"{{ path('register') }}\">Registro</a></li>
+            {% endif %}
+
             </ul>
             </div>
+            
+   {% if app.user %}
+        {{dump(app.user)}}
+    {% endif %}
+    
+
             <div class=\"clearfix\"></div>
         {% endblock %}
 
-        {% block body %}{% endblock %}
+        {% block body %}
+        
+        {% endblock %}
     </body>
 </html>
 ", "base.html.twig", "C:\\wamp64\\www\\proyecto-symfony\\templates\\base.html.twig");
