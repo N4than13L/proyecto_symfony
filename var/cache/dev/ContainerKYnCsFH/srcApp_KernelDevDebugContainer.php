@@ -1,6 +1,6 @@
 <?php
 
-namespace ContainerHBI1Wqc;
+namespace ContainerKYnCsFH;
 
 use Symfony\Component\DependencyInjection\Argument\RewindableGenerator;
 use Symfony\Component\DependencyInjection\ContainerInterface;
@@ -1723,11 +1723,31 @@ class srcApp_KernelDevDebugContainer extends Container
     }
 
     /**
-     * Gets the private '.errored..service_locator.RLVVpop.Symfony\Component\Security\Core\User\UserInterface' shared service.
+     * Gets the private '.errored..service_locator.P9nLER6.App\Entity\Task' shared service.
+     *
+     * @return \App\Entity\Task
+     */
+    protected function getTask2Service()
+    {
+        $this->throw('Cannot autowire service ".service_locator.P9nLER6": it references class "App\\Entity\\Task" but no such service exists.');
+    }
+
+    /**
+     * Gets the private '.errored..service_locator.P9nLER6.Symfony\Component\Security\Core\User\UserInterface' shared service.
      *
      * @return \Symfony\Component\Security\Core\User\UserInterface
      */
     protected function getUserInterfaceService()
+    {
+        $this->throw('Cannot autowire service ".service_locator.P9nLER6": it references interface "Symfony\\Component\\Security\\Core\\User\\UserInterface" but no such service exists. Did you create a class that implements this interface?');
+    }
+
+    /**
+     * Gets the private '.errored..service_locator.RLVVpop.Symfony\Component\Security\Core\User\UserInterface' shared service.
+     *
+     * @return \Symfony\Component\Security\Core\User\UserInterface
+     */
+    protected function getUserInterface2Service()
     {
         $this->throw('Cannot autowire service ".service_locator.RLVVpop": it references interface "Symfony\\Component\\Security\\Core\\User\\UserInterface" but no such service exists. Did you create a class that implements this interface?');
     }
@@ -1753,6 +1773,22 @@ class srcApp_KernelDevDebugContainer extends Container
             'task' => ['privates', '.errored..service_locator.INem9Yq.App\\Entity\\Task', NULL, 'Cannot autowire service ".service_locator.INem9Yq": it references class "App\\Entity\\Task" but no such service exists.'],
         ], [
             'task' => 'App\\Entity\\Task',
+        ]);
+    }
+
+    /**
+     * Gets the private '.service_locator.P9nLER6' shared service.
+     *
+     * @return \Symfony\Component\DependencyInjection\ServiceLocator
+     */
+    protected function get_ServiceLocator_P9nLER6Service()
+    {
+        return $this->privates['.service_locator.P9nLER6'] = new \Symfony\Component\DependencyInjection\Argument\ServiceLocator($this->getService, [
+            'task' => ['privates', '.errored..service_locator.P9nLER6.App\\Entity\\Task', NULL, 'Cannot autowire service ".service_locator.P9nLER6": it references class "App\\Entity\\Task" but no such service exists.'],
+            'user' => ['privates', '.errored..service_locator.P9nLER6.Symfony\\Component\\Security\\Core\\User\\UserInterface', NULL, 'Cannot autowire service ".service_locator.P9nLER6": it references interface "Symfony\\Component\\Security\\Core\\User\\UserInterface" but no such service exists. Did you create a class that implements this interface?'],
+        ], [
+            'task' => 'App\\Entity\\Task',
+            'user' => 'Symfony\\Component\\Security\\Core\\User\\UserInterface',
         ]);
     }
 
@@ -1785,6 +1821,46 @@ class srcApp_KernelDevDebugContainer extends Container
     }
 
     /**
+     * Gets the private '.service_locator.jB_8vTl' shared service.
+     *
+     * @return \Symfony\Component\DependencyInjection\ServiceLocator
+     */
+    protected function get_ServiceLocator_JB8vTlService()
+    {
+        return $this->privates['.service_locator.jB_8vTl'] = new \Symfony\Component\DependencyInjection\Argument\ServiceLocator($this->getService, [
+            'App\\Controller\\TaskController::creation' => ['privates', '.service_locator.RLVVpop', 'get_ServiceLocator_RLVVpopService', false],
+            'App\\Controller\\TaskController::delete' => ['privates', '.service_locator.P9nLER6', 'get_ServiceLocator_P9nLER6Service', false],
+            'App\\Controller\\TaskController::detail' => ['privates', '.service_locator.INem9Yq', 'get_ServiceLocator_INem9YqService', false],
+            'App\\Controller\\TaskController::edit' => ['privates', '.service_locator.P9nLER6', 'get_ServiceLocator_P9nLER6Service', false],
+            'App\\Controller\\TaskController::myTasks' => ['privates', '.service_locator.RLVVpop', 'get_ServiceLocator_RLVVpopService', false],
+            'App\\Controller\\UserController::login' => ['privates', '.service_locator.g.xob4v', 'get_ServiceLocator_G_Xob4vService', false],
+            'App\\Controller\\UserController::register' => ['privates', '.service_locator.jmvbEvf', 'get_ServiceLocator_JmvbEvfService', false],
+            'App\\Controller\\TaskController:creation' => ['privates', '.service_locator.RLVVpop', 'get_ServiceLocator_RLVVpopService', false],
+            'App\\Controller\\TaskController:delete' => ['privates', '.service_locator.P9nLER6', 'get_ServiceLocator_P9nLER6Service', false],
+            'App\\Controller\\TaskController:detail' => ['privates', '.service_locator.INem9Yq', 'get_ServiceLocator_INem9YqService', false],
+            'App\\Controller\\TaskController:edit' => ['privates', '.service_locator.P9nLER6', 'get_ServiceLocator_P9nLER6Service', false],
+            'App\\Controller\\TaskController:myTasks' => ['privates', '.service_locator.RLVVpop', 'get_ServiceLocator_RLVVpopService', false],
+            'App\\Controller\\UserController:login' => ['privates', '.service_locator.g.xob4v', 'get_ServiceLocator_G_Xob4vService', false],
+            'App\\Controller\\UserController:register' => ['privates', '.service_locator.jmvbEvf', 'get_ServiceLocator_JmvbEvfService', false],
+        ], [
+            'App\\Controller\\TaskController::creation' => '?',
+            'App\\Controller\\TaskController::delete' => '?',
+            'App\\Controller\\TaskController::detail' => '?',
+            'App\\Controller\\TaskController::edit' => '?',
+            'App\\Controller\\TaskController::myTasks' => '?',
+            'App\\Controller\\UserController::login' => '?',
+            'App\\Controller\\UserController::register' => '?',
+            'App\\Controller\\TaskController:creation' => '?',
+            'App\\Controller\\TaskController:delete' => '?',
+            'App\\Controller\\TaskController:detail' => '?',
+            'App\\Controller\\TaskController:edit' => '?',
+            'App\\Controller\\TaskController:myTasks' => '?',
+            'App\\Controller\\UserController:login' => '?',
+            'App\\Controller\\UserController:register' => '?',
+        ]);
+    }
+
+    /**
      * Gets the private '.service_locator.jmvbEvf' shared service.
      *
      * @return \Symfony\Component\DependencyInjection\ServiceLocator
@@ -1795,42 +1871,6 @@ class srcApp_KernelDevDebugContainer extends Container
             'encoder' => ['services', 'security.password_encoder', 'getSecurity_PasswordEncoderService', false],
         ], [
             'encoder' => '?',
-        ]);
-    }
-
-    /**
-     * Gets the private '.service_locator.lAy9A5A' shared service.
-     *
-     * @return \Symfony\Component\DependencyInjection\ServiceLocator
-     */
-    protected function get_ServiceLocator_LAy9A5AService()
-    {
-        return $this->privates['.service_locator.lAy9A5A'] = new \Symfony\Component\DependencyInjection\Argument\ServiceLocator($this->getService, [
-            'App\\Controller\\TaskController::creation' => ['privates', '.service_locator.RLVVpop', 'get_ServiceLocator_RLVVpopService', false],
-            'App\\Controller\\TaskController::detail' => ['privates', '.service_locator.INem9Yq', 'get_ServiceLocator_INem9YqService', false],
-            'App\\Controller\\TaskController::edit' => ['privates', '.service_locator.INem9Yq', 'get_ServiceLocator_INem9YqService', false],
-            'App\\Controller\\TaskController::myTasks' => ['privates', '.service_locator.RLVVpop', 'get_ServiceLocator_RLVVpopService', false],
-            'App\\Controller\\UserController::login' => ['privates', '.service_locator.g.xob4v', 'get_ServiceLocator_G_Xob4vService', false],
-            'App\\Controller\\UserController::register' => ['privates', '.service_locator.jmvbEvf', 'get_ServiceLocator_JmvbEvfService', false],
-            'App\\Controller\\TaskController:creation' => ['privates', '.service_locator.RLVVpop', 'get_ServiceLocator_RLVVpopService', false],
-            'App\\Controller\\TaskController:detail' => ['privates', '.service_locator.INem9Yq', 'get_ServiceLocator_INem9YqService', false],
-            'App\\Controller\\TaskController:edit' => ['privates', '.service_locator.INem9Yq', 'get_ServiceLocator_INem9YqService', false],
-            'App\\Controller\\TaskController:myTasks' => ['privates', '.service_locator.RLVVpop', 'get_ServiceLocator_RLVVpopService', false],
-            'App\\Controller\\UserController:login' => ['privates', '.service_locator.g.xob4v', 'get_ServiceLocator_G_Xob4vService', false],
-            'App\\Controller\\UserController:register' => ['privates', '.service_locator.jmvbEvf', 'get_ServiceLocator_JmvbEvfService', false],
-        ], [
-            'App\\Controller\\TaskController::creation' => '?',
-            'App\\Controller\\TaskController::detail' => '?',
-            'App\\Controller\\TaskController::edit' => '?',
-            'App\\Controller\\TaskController::myTasks' => '?',
-            'App\\Controller\\UserController::login' => '?',
-            'App\\Controller\\UserController::register' => '?',
-            'App\\Controller\\TaskController:creation' => '?',
-            'App\\Controller\\TaskController:detail' => '?',
-            'App\\Controller\\TaskController:edit' => '?',
-            'App\\Controller\\TaskController:myTasks' => '?',
-            'App\\Controller\\UserController:login' => '?',
-            'App\\Controller\\UserController:register' => '?',
         ]);
     }
 
@@ -2658,7 +2698,7 @@ class srcApp_KernelDevDebugContainer extends Container
         include_once \dirname(__DIR__, 4).''.\DIRECTORY_SEPARATOR.'vendor'.\DIRECTORY_SEPARATOR.'symfony'.\DIRECTORY_SEPARATOR.'http-kernel'.\DIRECTORY_SEPARATOR.'Controller'.\DIRECTORY_SEPARATOR.'ArgumentResolver'.\DIRECTORY_SEPARATOR.'TraceableValueResolver.php';
         include_once \dirname(__DIR__, 4).''.\DIRECTORY_SEPARATOR.'vendor'.\DIRECTORY_SEPARATOR.'symfony'.\DIRECTORY_SEPARATOR.'http-kernel'.\DIRECTORY_SEPARATOR.'Controller'.\DIRECTORY_SEPARATOR.'ArgumentResolver'.\DIRECTORY_SEPARATOR.'NotTaggedControllerValueResolver.php';
 
-        return $this->privates['debug.argument_resolver.not_tagged_controller'] = new \Symfony\Component\HttpKernel\Controller\ArgumentResolver\TraceableValueResolver(new \Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver(($this->privates['.service_locator.lAy9A5A'] ?? $this->get_ServiceLocator_LAy9A5AService())), ($this->privates['debug.stopwatch'] ?? ($this->privates['debug.stopwatch'] = new \Symfony\Component\Stopwatch\Stopwatch(true))));
+        return $this->privates['debug.argument_resolver.not_tagged_controller'] = new \Symfony\Component\HttpKernel\Controller\ArgumentResolver\TraceableValueResolver(new \Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver(($this->privates['.service_locator.jB_8vTl'] ?? $this->get_ServiceLocator_JB8vTlService())), ($this->privates['debug.stopwatch'] ?? ($this->privates['debug.stopwatch'] = new \Symfony\Component\Stopwatch\Stopwatch(true))));
     }
 
     /**
@@ -2700,7 +2740,7 @@ class srcApp_KernelDevDebugContainer extends Container
         include_once \dirname(__DIR__, 4).''.\DIRECTORY_SEPARATOR.'vendor'.\DIRECTORY_SEPARATOR.'symfony'.\DIRECTORY_SEPARATOR.'http-kernel'.\DIRECTORY_SEPARATOR.'Controller'.\DIRECTORY_SEPARATOR.'ArgumentResolver'.\DIRECTORY_SEPARATOR.'TraceableValueResolver.php';
         include_once \dirname(__DIR__, 4).''.\DIRECTORY_SEPARATOR.'vendor'.\DIRECTORY_SEPARATOR.'symfony'.\DIRECTORY_SEPARATOR.'http-kernel'.\DIRECTORY_SEPARATOR.'Controller'.\DIRECTORY_SEPARATOR.'ArgumentResolver'.\DIRECTORY_SEPARATOR.'ServiceValueResolver.php';
 
-        return $this->privates['debug.argument_resolver.service'] = new \Symfony\Component\HttpKernel\Controller\ArgumentResolver\TraceableValueResolver(new \Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver(($this->privates['.service_locator.lAy9A5A'] ?? $this->get_ServiceLocator_LAy9A5AService())), ($this->privates['debug.stopwatch'] ?? ($this->privates['debug.stopwatch'] = new \Symfony\Component\Stopwatch\Stopwatch(true))));
+        return $this->privates['debug.argument_resolver.service'] = new \Symfony\Component\HttpKernel\Controller\ArgumentResolver\TraceableValueResolver(new \Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver(($this->privates['.service_locator.jB_8vTl'] ?? $this->get_ServiceLocator_JB8vTlService())), ($this->privates['debug.stopwatch'] ?? ($this->privates['debug.stopwatch'] = new \Symfony\Component\Stopwatch\Stopwatch(true))));
     }
 
     /**

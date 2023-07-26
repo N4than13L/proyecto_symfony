@@ -14,6 +14,10 @@ task_creation:
   path: /crear-tarea
   controller: App\Controller\TaskController::creation
 
+task_delete:
+  path: /eliminar/tarea/{id}
+  controller: App\Controller\TaskController::delete
+
 my_tasks:
   path: /mis-tareas
   controller: App\Controller\TaskController::myTasks

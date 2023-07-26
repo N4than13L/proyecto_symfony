@@ -479,3 +479,12 @@ aac657,::1,POST,http://localhost/proyecto-symfony/public/editar-tarea/3,16904062
 3a3a08,::1,GET,http://localhost/proyecto-symfony/public/editar-tarea/3,1690406266,,200
 774d9d,::1,POST,http://localhost/proyecto-symfony/public/editar-tarea/3,1690406272,,302
 4133e6,::1,GET,http://localhost/proyecto-symfony/public/tarea/3,1690406272,,200
+624e5e,::1,GET,http://localhost/proyecto-symfony/public/,1690406416,,200
+5df8f5,::1,GET,http://localhost/proyecto-symfony/public/,1690406513,,200
+b12aa9,::1,GET,http://localhost/proyecto-symfony/public/,1690406534,,200
+510680,::1,GET,http://localhost/proyecto-symfony/public/,1690406889,,200
+1da6ef,::1,GET,http://localhost/proyecto-symfony/public/eliminar/tarea/5,1690406894,,302
+60c6c7,::1,GET,http://localhost/proyecto-symfony/public/,1690406894,,200
+cd6bc1,::1,GET,http://localhost/proyecto-symfony/public/eliminar/tarea/3,1690406897,,302
+14e5ce,::1,GET,http://localhost/proyecto-symfony/public/,1690406898,,200
+5c8df9,::1,GET,http://localhost/proyecto-symfony/public/mis-tareas,1690406946,,200

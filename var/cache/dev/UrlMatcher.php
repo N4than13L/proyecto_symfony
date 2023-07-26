@@ -39,7 +39,10 @@ return [
                     .')'
                 .')'
                 .'|/tarea/([^/]++)(*:184)'
-                .'|/editar\\-tarea/([^/]++)(*:215)'
+                .'|/e(?'
+                    .'|ditar\\-tarea/([^/]++)(*:218)'
+                    .'|liminar/tarea/([^/]++)(*:248)'
+                .')'
             .')/?$}sD',
     ],
     [ // $dynamicRoutes
@@ -51,8 +54,9 @@ return [
         149 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
         159 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
         184 => [[['_route' => 'task_detail', '_controller' => 'App\\Controller\\TaskController::detail'], ['id'], null, null, false, true, null]],
-        215 => [
-            [['_route' => 'task_edit', '_controller' => 'App\\Controller\\TaskController::edit'], ['id'], null, null, false, true, null],
+        218 => [[['_route' => 'task_edit', '_controller' => 'App\\Controller\\TaskController::edit'], ['id'], null, null, false, true, null]],
+        248 => [
+            [['_route' => 'task_delete', '_controller' => 'App\\Controller\\TaskController::delete'], ['id'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
     ],

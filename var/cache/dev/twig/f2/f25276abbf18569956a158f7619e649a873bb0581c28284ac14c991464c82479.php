@@ -75,26 +75,37 @@ class __TwigTemplate_9a9ce174c24ba250ab8915d64f25d74dfa2931f4d3a3c6cf292e8b838fb
                 echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("task_detail", ["id" => twig_get_attribute($this->env, $this->source, $context["task"], "id", [], "any", false, false, false, 16)]), "html", null, true);
                 echo "\" class=\"btn_ver\">Ver</a>
 
-                    <a href=\"";
-                // line 18
-                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("task_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["task"], "id", [], "any", false, false, false, 18)]), "html", null, true);
-                echo "\" class=\"btn_editar\">Editar</a>
+                   
 
-                    <a href=\"#\" class=\"btn_eliminar\">Eliminar</a>
-                </td>
+                    ";
+                // line 20
+                if ((0 === twig_compare(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["task"], "user", [], "any", false, false, false, 20), "id", [], "any", false, false, false, 20), twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 20, $this->source); })()), "user", [], "any", false, false, false, 20), "id", [], "any", false, false, false, 20)))) {
+                    // line 21
+                    echo "                     <a href=\"";
+                    echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("task_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["task"], "id", [], "any", false, false, false, 21)]), "html", null, true);
+                    echo "\" class=\"btn_editar\">Editar</a>
+
+                    <a href=\"";
+                    // line 23
+                    echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("task_delete", ["id" => twig_get_attribute($this->env, $this->source, $context["task"], "id", [], "any", false, false, false, 23)]), "html", null, true);
+                    echo "\" class=\"btn_eliminar\">Eliminar</a>
+                    ";
+                }
+                // line 25
+                echo "                </td>
             </tr>
         ";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['task'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 24
+            // line 28
             echo "
     </table>
 
     ";
         } else {
-            // line 28
+            // line 32
             echo "    <strong>No hay tareas guardadas</strong>
 ";
         }
@@ -118,7 +129,7 @@ class __TwigTemplate_9a9ce174c24ba250ab8915d64f25d74dfa2931f4d3a3c6cf292e8b838fb
 
     public function getDebugInfo()
     {
-        return array (  98 => 28,  92 => 24,  80 => 18,  75 => 16,  70 => 14,  66 => 13,  62 => 12,  59 => 11,  55 => 10,  45 => 2,  43 => 1,);
+        return array (  109 => 32,  103 => 28,  95 => 25,  90 => 23,  84 => 21,  82 => 20,  75 => 16,  70 => 14,  66 => 13,  62 => 12,  59 => 11,  55 => 10,  45 => 2,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -140,9 +151,13 @@ class __TwigTemplate_9a9ce174c24ba250ab8915d64f25d74dfa2931f4d3a3c6cf292e8b838fb
                 <td class=\"buttons\">
                     <a href=\"{{ path('task_detail', {'id':task.id}) }}\" class=\"btn_ver\">Ver</a>
 
-                    <a href=\"{{ path('task_edit', {'id':task.id}) }}\" class=\"btn_editar\">Editar</a>
+                   
 
-                    <a href=\"#\" class=\"btn_eliminar\">Eliminar</a>
+                    {% if task.user.id == app.user.id %}
+                     <a href=\"{{ path('task_edit', {'id':task.id}) }}\" class=\"btn_editar\">Editar</a>
+
+                    <a href=\"{{ path('task_delete', {'id':task.id}) }}\" class=\"btn_eliminar\">Eliminar</a>
+                    {% endif %}
                 </td>
             </tr>
         {% endfor %}
