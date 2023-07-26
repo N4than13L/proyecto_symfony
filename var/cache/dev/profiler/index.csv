@@ -488,3 +488,12 @@ b12aa9,::1,GET,http://localhost/proyecto-symfony/public/,1690406534,,200
 cd6bc1,::1,GET,http://localhost/proyecto-symfony/public/eliminar/tarea/3,1690406897,,302
 14e5ce,::1,GET,http://localhost/proyecto-symfony/public/,1690406898,,200
 5c8df9,::1,GET,http://localhost/proyecto-symfony/public/mis-tareas,1690406946,,200
+57b0ab,::1,GET,http://localhost/proyecto-symfony/public/logout,1690406972,,302
+cb932a,::1,GET,http://localhost/proyecto-symfony/public/login,1690406972,,200
+f5cfd5,::1,GET,http://localhost/proyecto-symfony/public/,1690406991,99e802,500
+99e802,::1,GET,http://localhost/proyecto-symfony/public/,1690406991,,500
+7fdf3f,::1,GET,http://localhost/proyecto-symfony/public/,1690407049,1c707d,500
+1c707d,::1,GET,http://localhost/proyecto-symfony/public/,1690407049,,500
+4c1533,::1,GET,http://localhost/proyecto-symfony/public/,1690407071,7f1b16,500
+7f1b16,::1,GET,http://localhost/proyecto-symfony/public/,1690407071,,500
+2055aa,::1,GET,http://localhost/proyecto-symfony/public/,1690407082,,200

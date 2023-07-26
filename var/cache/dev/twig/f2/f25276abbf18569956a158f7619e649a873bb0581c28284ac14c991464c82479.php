@@ -79,7 +79,7 @@ class __TwigTemplate_9a9ce174c24ba250ab8915d64f25d74dfa2931f4d3a3c6cf292e8b838fb
 
                     ";
                 // line 20
-                if ((0 === twig_compare(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["task"], "user", [], "any", false, false, false, 20), "id", [], "any", false, false, false, 20), twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 20, $this->source); })()), "user", [], "any", false, false, false, 20), "id", [], "any", false, false, false, 20)))) {
+                if (((0 !== twig_compare(twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 20, $this->source); })()), "user", [], "any", false, false, false, 20), null)) && (0 === twig_compare(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["task"], "user", [], "any", false, false, false, 20), "id", [], "any", false, false, false, 20), twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 20, $this->source); })()), "user", [], "any", false, false, false, 20), "id", [], "any", false, false, false, 20))))) {
                     // line 21
                     echo "                     <a href=\"";
                     echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("task_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["task"], "id", [], "any", false, false, false, 21)]), "html", null, true);
@@ -153,7 +153,7 @@ class __TwigTemplate_9a9ce174c24ba250ab8915d64f25d74dfa2931f4d3a3c6cf292e8b838fb
 
                    
 
-                    {% if task.user.id == app.user.id %}
+                    {% if app.user != null and task.user.id == app.user.id %}
                      <a href=\"{{ path('task_edit', {'id':task.id}) }}\" class=\"btn_editar\">Editar</a>
 
                     <a href=\"{{ path('task_delete', {'id':task.id}) }}\" class=\"btn_eliminar\">Eliminar</a>

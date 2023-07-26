@@ -17,7 +17,7 @@
 
                    
 
-                    {% if task.user.id == app.user.id %}
+                    {% if app.user != null and task.user.id == app.user.id %}
                      <a href="{{ path('task_edit', {'id':task.id}) }}" class="btn_editar">Editar</a>
 
                     <a href="{{ path('task_delete', {'id':task.id}) }}" class="btn_eliminar">Eliminar</a>
