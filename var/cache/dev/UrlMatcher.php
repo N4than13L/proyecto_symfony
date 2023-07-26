@@ -14,11 +14,11 @@ return [
         '/_profiler/phpinfo' => [[['_route' => '_profiler_phpinfo', '_controller' => 'web_profiler.controller.profiler::phpinfoAction'], null, null, null, false, false, null]],
         '/_profiler/open' => [[['_route' => '_profiler_open_file', '_controller' => 'web_profiler.controller.profiler::openAction'], null, null, null, false, false, null]],
         '/user' => [[['_route' => 'app_user', '_controller' => 'App\\Controller\\UserController::register'], null, null, null, false, false, null]],
-        '/' => [[['_route' => 'tasks', '_controller' => 'App\\Controller\\TaskController::index'], null, null, null, false, false, null]],
+        '/tareas' => [[['_route' => 'tasks', '_controller' => 'App\\Controller\\TaskController::index'], null, null, null, false, false, null]],
         '/crear-tarea' => [[['_route' => 'task_creation', '_controller' => 'App\\Controller\\TaskController::creation'], null, null, null, false, false, null]],
         '/mis-tareas' => [[['_route' => 'my_tasks', '_controller' => 'App\\Controller\\TaskController::myTasks'], null, null, null, false, false, null]],
         '/registro' => [[['_route' => 'register', '_controller' => 'App\\Controller\\UserController::register'], null, null, null, false, false, null]],
-        '/login' => [[['_route' => 'login', '_controller' => 'App\\Controller\\UserController::login'], null, null, null, false, false, null]],
+        '/' => [[['_route' => 'login', '_controller' => 'App\\Controller\\UserController::login'], null, null, null, false, false, null]],
         '/logout' => [[['_route' => 'logout'], null, null, null, false, false, null]],
     ],
     [ // $regexpList

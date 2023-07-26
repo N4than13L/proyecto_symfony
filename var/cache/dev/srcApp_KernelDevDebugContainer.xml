@@ -4479,7 +4479,50 @@
       <argument type="service" id="security.authentication.retry_entry_point"/>
       <argument type="service" id="monolog.logger.security" on-invalid="null"/>
     </service>
-    <service id="security.access_map" class="Symfony\Component\Security\Http\AccessMap" public="false"/>
+    <service id="security.access_map" class="Symfony\Component\Security\Http\AccessMap" public="false">
+      <call method="add">
+        <argument type="service" id=".security.request_matcher.8xNvBud"/>
+        <argument type="collection">
+          <argument>ROLE_USER</argument>
+        </argument>
+        <argument>null</argument>
+      </call>
+      <call method="add">
+        <argument type="service" id=".security.request_matcher.TWzC7tQ"/>
+        <argument type="collection">
+          <argument>ROLE_USER</argument>
+        </argument>
+        <argument>null</argument>
+      </call>
+      <call method="add">
+        <argument type="service" id=".security.request_matcher.KrpSRZR"/>
+        <argument type="collection">
+          <argument>ROLE_USER</argument>
+        </argument>
+        <argument>null</argument>
+      </call>
+      <call method="add">
+        <argument type="service" id=".security.request_matcher.GC_4Kvh"/>
+        <argument type="collection">
+          <argument>ROLE_USER</argument>
+        </argument>
+        <argument>null</argument>
+      </call>
+      <call method="add">
+        <argument type="service" id=".security.request_matcher.vr3GjOY"/>
+        <argument type="collection">
+          <argument>ROLE_USER</argument>
+        </argument>
+        <argument>null</argument>
+      </call>
+      <call method="add">
+        <argument type="service" id=".security.request_matcher.MooS9en"/>
+        <argument type="collection">
+          <argument>ROLE_USER</argument>
+        </argument>
+        <argument>null</argument>
+      </call>
+    </service>
     <service id="security.context_listener" class="Symfony\Component\Security\Http\Firewall\ContextListener" public="false">
       <tag name="monolog.logger" channel="security"/>
       <argument type="service" id="security.untracked_token_storage"/>
@@ -4871,7 +4914,7 @@
     </service>
     <service id="security.logout.success_handler.main" class="Symfony\Component\Security\Http\Logout\DefaultLogoutSuccessHandler" public="false">
       <argument type="service" id="security.http_utils"/>
-      <argument>/login</argument>
+      <argument>/</argument>
     </service>
     <service id="security.authentication.provider.dao.main" class="Symfony\Component\Security\Core\Authentication\Provider\DaoAuthenticationProvider" public="false">
       <argument type="service" id="security.user.provider.concrete.proveedor"/>
@@ -4979,6 +5022,24 @@
         <argument key="security.firewall.map.context.dev" type="service_closure" id="security.firewall.map.context.dev"/>
         <argument key="security.firewall.map.context.main" type="service_closure" id="security.firewall.map.context.main"/>
       </argument>
+    </service>
+    <service id=".security.request_matcher.8xNvBud" class="Symfony\Component\HttpFoundation\RequestMatcher" public="false">
+      <argument>^/tarea</argument>
+    </service>
+    <service id=".security.request_matcher.TWzC7tQ" class="Symfony\Component\HttpFoundation\RequestMatcher" public="false">
+      <argument>^/tareas</argument>
+    </service>
+    <service id=".security.request_matcher.KrpSRZR" class="Symfony\Component\HttpFoundation\RequestMatcher" public="false">
+      <argument>^/crear-tarea</argument>
+    </service>
+    <service id=".security.request_matcher.GC_4Kvh" class="Symfony\Component\HttpFoundation\RequestMatcher" public="false">
+      <argument>^/mis-tareas</argument>
+    </service>
+    <service id=".security.request_matcher.vr3GjOY" class="Symfony\Component\HttpFoundation\RequestMatcher" public="false">
+      <argument>^/editar-tarea</argument>
+    </service>
+    <service id=".security.request_matcher.MooS9en" class="Symfony\Component\HttpFoundation\RequestMatcher" public="false">
+      <argument>^/eliminar/tarea</argument>
     </service>
     <service id="security.command.user_password_encoder" class="Symfony\Bundle\SecurityBundle\Command\UserPasswordEncoderCommand" public="false">
       <tag name="console.command" command="security:encode-password"/>

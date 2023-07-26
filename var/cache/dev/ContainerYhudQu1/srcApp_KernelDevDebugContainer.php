@@ -1,6 +1,6 @@
 <?php
 
-namespace ContainerRezH4Ax;
+namespace ContainerYhudQu1;
 
 use Symfony\Component\DependencyInjection\Argument\RewindableGenerator;
 use Symfony\Component\DependencyInjection\ContainerInterface;
@@ -1821,6 +1821,46 @@ class srcApp_KernelDevDebugContainer extends Container
     }
 
     /**
+     * Gets the private '.service_locator.jB_8vTl' shared service.
+     *
+     * @return \Symfony\Component\DependencyInjection\ServiceLocator
+     */
+    protected function get_ServiceLocator_JB8vTlService()
+    {
+        return $this->privates['.service_locator.jB_8vTl'] = new \Symfony\Component\DependencyInjection\Argument\ServiceLocator($this->getService, [
+            'App\\Controller\\TaskController::creation' => ['privates', '.service_locator.RLVVpop', 'get_ServiceLocator_RLVVpopService', false],
+            'App\\Controller\\TaskController::delete' => ['privates', '.service_locator.P9nLER6', 'get_ServiceLocator_P9nLER6Service', false],
+            'App\\Controller\\TaskController::detail' => ['privates', '.service_locator.INem9Yq', 'get_ServiceLocator_INem9YqService', false],
+            'App\\Controller\\TaskController::edit' => ['privates', '.service_locator.P9nLER6', 'get_ServiceLocator_P9nLER6Service', false],
+            'App\\Controller\\TaskController::myTasks' => ['privates', '.service_locator.RLVVpop', 'get_ServiceLocator_RLVVpopService', false],
+            'App\\Controller\\UserController::login' => ['privates', '.service_locator.g.xob4v', 'get_ServiceLocator_G_Xob4vService', false],
+            'App\\Controller\\UserController::register' => ['privates', '.service_locator.jmvbEvf', 'get_ServiceLocator_JmvbEvfService', false],
+            'App\\Controller\\TaskController:creation' => ['privates', '.service_locator.RLVVpop', 'get_ServiceLocator_RLVVpopService', false],
+            'App\\Controller\\TaskController:delete' => ['privates', '.service_locator.P9nLER6', 'get_ServiceLocator_P9nLER6Service', false],
+            'App\\Controller\\TaskController:detail' => ['privates', '.service_locator.INem9Yq', 'get_ServiceLocator_INem9YqService', false],
+            'App\\Controller\\TaskController:edit' => ['privates', '.service_locator.P9nLER6', 'get_ServiceLocator_P9nLER6Service', false],
+            'App\\Controller\\TaskController:myTasks' => ['privates', '.service_locator.RLVVpop', 'get_ServiceLocator_RLVVpopService', false],
+            'App\\Controller\\UserController:login' => ['privates', '.service_locator.g.xob4v', 'get_ServiceLocator_G_Xob4vService', false],
+            'App\\Controller\\UserController:register' => ['privates', '.service_locator.jmvbEvf', 'get_ServiceLocator_JmvbEvfService', false],
+        ], [
+            'App\\Controller\\TaskController::creation' => '?',
+            'App\\Controller\\TaskController::delete' => '?',
+            'App\\Controller\\TaskController::detail' => '?',
+            'App\\Controller\\TaskController::edit' => '?',
+            'App\\Controller\\TaskController::myTasks' => '?',
+            'App\\Controller\\UserController::login' => '?',
+            'App\\Controller\\UserController::register' => '?',
+            'App\\Controller\\TaskController:creation' => '?',
+            'App\\Controller\\TaskController:delete' => '?',
+            'App\\Controller\\TaskController:detail' => '?',
+            'App\\Controller\\TaskController:edit' => '?',
+            'App\\Controller\\TaskController:myTasks' => '?',
+            'App\\Controller\\UserController:login' => '?',
+            'App\\Controller\\UserController:register' => '?',
+        ]);
+    }
+
+    /**
      * Gets the private '.service_locator.jmvbEvf' shared service.
      *
      * @return \Symfony\Component\DependencyInjection\ServiceLocator
@@ -1867,42 +1907,6 @@ class srcApp_KernelDevDebugContainer extends Container
             'serializer' => '?',
             'session' => '?',
             'twig' => '?',
-        ]);
-    }
-
-    /**
-     * Gets the private '.service_locator.zu_PTQh' shared service.
-     *
-     * @return \Symfony\Component\DependencyInjection\ServiceLocator
-     */
-    protected function get_ServiceLocator_ZuPTQhService()
-    {
-        return $this->privates['.service_locator.zu_PTQh'] = new \Symfony\Component\DependencyInjection\Argument\ServiceLocator($this->getService, [
-            'App\\Controller\\TaskController::creation' => ['privates', '.service_locator.RLVVpop', 'get_ServiceLocator_RLVVpopService', false],
-            'App\\Controller\\TaskController::detail' => ['privates', '.service_locator.INem9Yq', 'get_ServiceLocator_INem9YqService', false],
-            'App\\Controller\\TaskController::edit' => ['privates', '.service_locator.P9nLER6', 'get_ServiceLocator_P9nLER6Service', false],
-            'App\\Controller\\TaskController::myTasks' => ['privates', '.service_locator.RLVVpop', 'get_ServiceLocator_RLVVpopService', false],
-            'App\\Controller\\UserController::login' => ['privates', '.service_locator.g.xob4v', 'get_ServiceLocator_G_Xob4vService', false],
-            'App\\Controller\\UserController::register' => ['privates', '.service_locator.jmvbEvf', 'get_ServiceLocator_JmvbEvfService', false],
-            'App\\Controller\\TaskController:creation' => ['privates', '.service_locator.RLVVpop', 'get_ServiceLocator_RLVVpopService', false],
-            'App\\Controller\\TaskController:detail' => ['privates', '.service_locator.INem9Yq', 'get_ServiceLocator_INem9YqService', false],
-            'App\\Controller\\TaskController:edit' => ['privates', '.service_locator.P9nLER6', 'get_ServiceLocator_P9nLER6Service', false],
-            'App\\Controller\\TaskController:myTasks' => ['privates', '.service_locator.RLVVpop', 'get_ServiceLocator_RLVVpopService', false],
-            'App\\Controller\\UserController:login' => ['privates', '.service_locator.g.xob4v', 'get_ServiceLocator_G_Xob4vService', false],
-            'App\\Controller\\UserController:register' => ['privates', '.service_locator.jmvbEvf', 'get_ServiceLocator_JmvbEvfService', false],
-        ], [
-            'App\\Controller\\TaskController::creation' => '?',
-            'App\\Controller\\TaskController::detail' => '?',
-            'App\\Controller\\TaskController::edit' => '?',
-            'App\\Controller\\TaskController::myTasks' => '?',
-            'App\\Controller\\UserController::login' => '?',
-            'App\\Controller\\UserController::register' => '?',
-            'App\\Controller\\TaskController:creation' => '?',
-            'App\\Controller\\TaskController:detail' => '?',
-            'App\\Controller\\TaskController:edit' => '?',
-            'App\\Controller\\TaskController:myTasks' => '?',
-            'App\\Controller\\UserController:login' => '?',
-            'App\\Controller\\UserController:register' => '?',
         ]);
     }
 
@@ -2694,7 +2698,7 @@ class srcApp_KernelDevDebugContainer extends Container
         include_once \dirname(__DIR__, 4).''.\DIRECTORY_SEPARATOR.'vendor'.\DIRECTORY_SEPARATOR.'symfony'.\DIRECTORY_SEPARATOR.'http-kernel'.\DIRECTORY_SEPARATOR.'Controller'.\DIRECTORY_SEPARATOR.'ArgumentResolver'.\DIRECTORY_SEPARATOR.'TraceableValueResolver.php';
         include_once \dirname(__DIR__, 4).''.\DIRECTORY_SEPARATOR.'vendor'.\DIRECTORY_SEPARATOR.'symfony'.\DIRECTORY_SEPARATOR.'http-kernel'.\DIRECTORY_SEPARATOR.'Controller'.\DIRECTORY_SEPARATOR.'ArgumentResolver'.\DIRECTORY_SEPARATOR.'NotTaggedControllerValueResolver.php';
 
-        return $this->privates['debug.argument_resolver.not_tagged_controller'] = new \Symfony\Component\HttpKernel\Controller\ArgumentResolver\TraceableValueResolver(new \Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver(($this->privates['.service_locator.zu_PTQh'] ?? $this->get_ServiceLocator_ZuPTQhService())), ($this->privates['debug.stopwatch'] ?? ($this->privates['debug.stopwatch'] = new \Symfony\Component\Stopwatch\Stopwatch(true))));
+        return $this->privates['debug.argument_resolver.not_tagged_controller'] = new \Symfony\Component\HttpKernel\Controller\ArgumentResolver\TraceableValueResolver(new \Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver(($this->privates['.service_locator.jB_8vTl'] ?? $this->get_ServiceLocator_JB8vTlService())), ($this->privates['debug.stopwatch'] ?? ($this->privates['debug.stopwatch'] = new \Symfony\Component\Stopwatch\Stopwatch(true))));
     }
 
     /**
@@ -2736,7 +2740,7 @@ class srcApp_KernelDevDebugContainer extends Container
         include_once \dirname(__DIR__, 4).''.\DIRECTORY_SEPARATOR.'vendor'.\DIRECTORY_SEPARATOR.'symfony'.\DIRECTORY_SEPARATOR.'http-kernel'.\DIRECTORY_SEPARATOR.'Controller'.\DIRECTORY_SEPARATOR.'ArgumentResolver'.\DIRECTORY_SEPARATOR.'TraceableValueResolver.php';
         include_once \dirname(__DIR__, 4).''.\DIRECTORY_SEPARATOR.'vendor'.\DIRECTORY_SEPARATOR.'symfony'.\DIRECTORY_SEPARATOR.'http-kernel'.\DIRECTORY_SEPARATOR.'Controller'.\DIRECTORY_SEPARATOR.'ArgumentResolver'.\DIRECTORY_SEPARATOR.'ServiceValueResolver.php';
 
-        return $this->privates['debug.argument_resolver.service'] = new \Symfony\Component\HttpKernel\Controller\ArgumentResolver\TraceableValueResolver(new \Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver(($this->privates['.service_locator.zu_PTQh'] ?? $this->get_ServiceLocator_ZuPTQhService())), ($this->privates['debug.stopwatch'] ?? ($this->privates['debug.stopwatch'] = new \Symfony\Component\Stopwatch\Stopwatch(true))));
+        return $this->privates['debug.argument_resolver.service'] = new \Symfony\Component\HttpKernel\Controller\ArgumentResolver\TraceableValueResolver(new \Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver(($this->privates['.service_locator.jB_8vTl'] ?? $this->get_ServiceLocator_JB8vTlService())), ($this->privates['debug.stopwatch'] ?? ($this->privates['debug.stopwatch'] = new \Symfony\Component\Stopwatch\Stopwatch(true))));
     }
 
     /**
@@ -4740,10 +4744,32 @@ class srcApp_KernelDevDebugContainer extends Container
         include_once \dirname(__DIR__, 4).''.\DIRECTORY_SEPARATOR.'vendor'.\DIRECTORY_SEPARATOR.'symfony'.\DIRECTORY_SEPARATOR.'security-http'.\DIRECTORY_SEPARATOR.'Firewall'.\DIRECTORY_SEPARATOR.'ListenerInterface.php';
         include_once \dirname(__DIR__, 4).''.\DIRECTORY_SEPARATOR.'vendor'.\DIRECTORY_SEPARATOR.'symfony'.\DIRECTORY_SEPARATOR.'security-http'.\DIRECTORY_SEPARATOR.'Firewall'.\DIRECTORY_SEPARATOR.'LegacyListenerTrait.php';
         include_once \dirname(__DIR__, 4).''.\DIRECTORY_SEPARATOR.'vendor'.\DIRECTORY_SEPARATOR.'symfony'.\DIRECTORY_SEPARATOR.'security-http'.\DIRECTORY_SEPARATOR.'Firewall'.\DIRECTORY_SEPARATOR.'AccessListener.php';
+
+        return $this->privates['security.access_listener'] = new \Symfony\Component\Security\Http\Firewall\AccessListener(($this->services['security.token_storage'] ?? $this->getSecurity_TokenStorageService()), ($this->privates['debug.security.access.decision_manager'] ?? $this->getDebug_Security_Access_DecisionManagerService()), ($this->privates['security.access_map'] ?? $this->getSecurity_AccessMapService()), ($this->privates['security.authentication.manager'] ?? $this->getSecurity_Authentication_ManagerService()));
+    }
+
+    /**
+     * Gets the private 'security.access_map' shared service.
+     *
+     * @return \Symfony\Component\Security\Http\AccessMap
+     */
+    protected function getSecurity_AccessMapService()
+    {
         include_once \dirname(__DIR__, 4).''.\DIRECTORY_SEPARATOR.'vendor'.\DIRECTORY_SEPARATOR.'symfony'.\DIRECTORY_SEPARATOR.'security-http'.\DIRECTORY_SEPARATOR.'AccessMapInterface.php';
         include_once \dirname(__DIR__, 4).''.\DIRECTORY_SEPARATOR.'vendor'.\DIRECTORY_SEPARATOR.'symfony'.\DIRECTORY_SEPARATOR.'security-http'.\DIRECTORY_SEPARATOR.'AccessMap.php';
+        include_once \dirname(__DIR__, 4).''.\DIRECTORY_SEPARATOR.'vendor'.\DIRECTORY_SEPARATOR.'symfony'.\DIRECTORY_SEPARATOR.'http-foundation'.\DIRECTORY_SEPARATOR.'RequestMatcherInterface.php';
+        include_once \dirname(__DIR__, 4).''.\DIRECTORY_SEPARATOR.'vendor'.\DIRECTORY_SEPARATOR.'symfony'.\DIRECTORY_SEPARATOR.'http-foundation'.\DIRECTORY_SEPARATOR.'RequestMatcher.php';
 
-        return $this->privates['security.access_listener'] = new \Symfony\Component\Security\Http\Firewall\AccessListener(($this->services['security.token_storage'] ?? $this->getSecurity_TokenStorageService()), ($this->privates['debug.security.access.decision_manager'] ?? $this->getDebug_Security_Access_DecisionManagerService()), ($this->privates['security.access_map'] ?? ($this->privates['security.access_map'] = new \Symfony\Component\Security\Http\AccessMap())), ($this->privates['security.authentication.manager'] ?? $this->getSecurity_Authentication_ManagerService()));
+        $this->privates['security.access_map'] = $instance = new \Symfony\Component\Security\Http\AccessMap();
+
+        $instance->add(new \Symfony\Component\HttpFoundation\RequestMatcher('^/tarea'), [0 => 'ROLE_USER'], NULL);
+        $instance->add(new \Symfony\Component\HttpFoundation\RequestMatcher('^/tareas'), [0 => 'ROLE_USER'], NULL);
+        $instance->add(new \Symfony\Component\HttpFoundation\RequestMatcher('^/crear-tarea'), [0 => 'ROLE_USER'], NULL);
+        $instance->add(new \Symfony\Component\HttpFoundation\RequestMatcher('^/mis-tareas'), [0 => 'ROLE_USER'], NULL);
+        $instance->add(new \Symfony\Component\HttpFoundation\RequestMatcher('^/editar-tarea'), [0 => 'ROLE_USER'], NULL);
+        $instance->add(new \Symfony\Component\HttpFoundation\RequestMatcher('^/eliminar/tarea'), [0 => 'ROLE_USER'], NULL);
+
+        return $instance;
     }
 
     /**
@@ -4839,10 +4865,8 @@ class srcApp_KernelDevDebugContainer extends Container
         include_once \dirname(__DIR__, 4).''.\DIRECTORY_SEPARATOR.'vendor'.\DIRECTORY_SEPARATOR.'symfony'.\DIRECTORY_SEPARATOR.'security-http'.\DIRECTORY_SEPARATOR.'Firewall'.\DIRECTORY_SEPARATOR.'ChannelListener.php';
         include_once \dirname(__DIR__, 4).''.\DIRECTORY_SEPARATOR.'vendor'.\DIRECTORY_SEPARATOR.'symfony'.\DIRECTORY_SEPARATOR.'security-http'.\DIRECTORY_SEPARATOR.'EntryPoint'.\DIRECTORY_SEPARATOR.'AuthenticationEntryPointInterface.php';
         include_once \dirname(__DIR__, 4).''.\DIRECTORY_SEPARATOR.'vendor'.\DIRECTORY_SEPARATOR.'symfony'.\DIRECTORY_SEPARATOR.'security-http'.\DIRECTORY_SEPARATOR.'EntryPoint'.\DIRECTORY_SEPARATOR.'RetryAuthenticationEntryPoint.php';
-        include_once \dirname(__DIR__, 4).''.\DIRECTORY_SEPARATOR.'vendor'.\DIRECTORY_SEPARATOR.'symfony'.\DIRECTORY_SEPARATOR.'security-http'.\DIRECTORY_SEPARATOR.'AccessMapInterface.php';
-        include_once \dirname(__DIR__, 4).''.\DIRECTORY_SEPARATOR.'vendor'.\DIRECTORY_SEPARATOR.'symfony'.\DIRECTORY_SEPARATOR.'security-http'.\DIRECTORY_SEPARATOR.'AccessMap.php';
 
-        return $this->privates['security.channel_listener'] = new \Symfony\Component\Security\Http\Firewall\ChannelListener(($this->privates['security.access_map'] ?? ($this->privates['security.access_map'] = new \Symfony\Component\Security\Http\AccessMap())), new \Symfony\Component\Security\Http\EntryPoint\RetryAuthenticationEntryPoint(80, 443), ($this->privates['monolog.logger.security'] ?? $this->getMonolog_Logger_SecurityService()));
+        return $this->privates['security.channel_listener'] = new \Symfony\Component\Security\Http\Firewall\ChannelListener(($this->privates['security.access_map'] ?? $this->getSecurity_AccessMapService()), new \Symfony\Component\Security\Http\EntryPoint\RetryAuthenticationEntryPoint(80, 443), ($this->privates['monolog.logger.security'] ?? $this->getMonolog_Logger_SecurityService()));
     }
 
     /**
