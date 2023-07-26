@@ -1,6 +1,14 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Crear Tareas{% endblock %}
+{% block title %}
+
+{% if edit %}
+Editar Tareas
+{% else %}
+Crear Tareas
+{% endif %}
+
+{% endblock %}
 
 {% block body %}
 <style>
@@ -9,7 +17,17 @@
 </style>
 
 <div class="example-wrapper">
-    <h2>Crear tareas ✅</h2>
+    <h2>
+{% if edit %}
+Editar Tareas
+{% else %}
+Crear Tareas
+{% endif %}
+</h2>
+
+    {{form_start(form)}}
+    {{form_widget(form)}}
+    {{form_end(form)}}
    
 </div>
 {% endblock %}

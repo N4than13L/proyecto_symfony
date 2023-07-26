@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello TaskController!{% endblock %}
+{% block title %}Tareas {% endblock %}
 
 {% block body %}
 <style>
@@ -11,27 +11,6 @@
 <div class="example-wrapper">
     <h2>Todas las tareas ✅</h2>
 
-    <table>
-        <tr>
-            <th>Tareas</th>
-            <th>Prioridad</th>
-            <th>Horas presupuestadas</th>
-            <th>Acciones</th>
-        </tr>
-
-        {%  for task in tasks %}
-            <tr>
-                <td>{{ task.title }}</td>
-                <td>{{ task.priority }}</td>
-                <td>{{ task.hours }}</td>
-                <td class="buttons">
-                    <a href="{{ path('task_detail', {'id':task.id}) }}" class="btn_ver">Ver</a>
-                    <a href="#" class="btn_editar">Editar</a>
-                    <a href="#" class="btn_eliminar">Eliminar</a>
-                </td>
-            </tr>
-        {% endfor %}
-
-    </table>
+    {{ include('includes/taskList.html.twig') }}
 </div>
 {% endblock %}

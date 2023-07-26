@@ -65,7 +65,7 @@ class __TwigTemplate_3bdc2be59ce18f5e0a204b3b7701929aea1aac6183f22d321a0fc92b461
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Hello TaskController!";
+        echo "Tareas ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -93,50 +93,10 @@ class __TwigTemplate_3bdc2be59ce18f5e0a204b3b7701929aea1aac6183f22d321a0fc92b461
 <div class=\"example-wrapper\">
     <h2>Todas las tareas ✅</h2>
 
-    <table>
-        <tr>
-            <th>Tareas</th>
-            <th>Prioridad</th>
-            <th>Horas presupuestadas</th>
-            <th>Acciones</th>
-        </tr>
-
-        ";
-        // line 22
-        $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["tasks"]) || array_key_exists("tasks", $context) ? $context["tasks"] : (function () { throw new RuntimeError('Variable "tasks" does not exist.', 22, $this->source); })()));
-        foreach ($context['_seq'] as $context["_key"] => $context["task"]) {
-            // line 23
-            echo "            <tr>
-                <td>";
-            // line 24
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["task"], "title", [], "any", false, false, false, 24), "html", null, true);
-            echo "</td>
-                <td>";
-            // line 25
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["task"], "priority", [], "any", false, false, false, 25), "html", null, true);
-            echo "</td>
-                <td>";
-            // line 26
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["task"], "hours", [], "any", false, false, false, 26), "html", null, true);
-            echo "</td>
-                <td class=\"buttons\">
-                    <a href=\"";
-            // line 28
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("task_detail", ["id" => twig_get_attribute($this->env, $this->source, $context["task"], "id", [], "any", false, false, false, 28)]), "html", null, true);
-            echo "\" class=\"btn_ver\">Ver</a>
-                    <a href=\"#\" class=\"btn_editar\">Editar</a>
-                    <a href=\"#\" class=\"btn_eliminar\">Eliminar</a>
-                </td>
-            </tr>
-        ";
-        }
-        $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['task'], $context['_parent'], $context['loop']);
-        $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 34
+    ";
+        // line 14
+        echo twig_include($this->env, $context, "includes/taskList.html.twig");
         echo "
-    </table>
 </div>
 ";
         
@@ -159,14 +119,14 @@ class __TwigTemplate_3bdc2be59ce18f5e0a204b3b7701929aea1aac6183f22d321a0fc92b461
 
     public function getDebugInfo()
     {
-        return array (  138 => 34,  126 => 28,  121 => 26,  117 => 25,  113 => 24,  110 => 23,  106 => 22,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  98 => 14,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}Hello TaskController!{% endblock %}
+{% block title %}Tareas {% endblock %}
 
 {% block body %}
 <style>
@@ -177,28 +137,7 @@ class __TwigTemplate_3bdc2be59ce18f5e0a204b3b7701929aea1aac6183f22d321a0fc92b461
 <div class=\"example-wrapper\">
     <h2>Todas las tareas ✅</h2>
 
-    <table>
-        <tr>
-            <th>Tareas</th>
-            <th>Prioridad</th>
-            <th>Horas presupuestadas</th>
-            <th>Acciones</th>
-        </tr>
-
-        {%  for task in tasks %}
-            <tr>
-                <td>{{ task.title }}</td>
-                <td>{{ task.priority }}</td>
-                <td>{{ task.hours }}</td>
-                <td class=\"buttons\">
-                    <a href=\"{{ path('task_detail', {'id':task.id}) }}\" class=\"btn_ver\">Ver</a>
-                    <a href=\"#\" class=\"btn_editar\">Editar</a>
-                    <a href=\"#\" class=\"btn_eliminar\">Eliminar</a>
-                </td>
-            </tr>
-        {% endfor %}
-
-    </table>
+    {{ include('includes/taskList.html.twig') }}
 </div>
 {% endblock %}
 ", "task/index.html.twig", "C:\\wamp64\\www\\proyecto-symfony\\templates\\task\\index.html.twig");

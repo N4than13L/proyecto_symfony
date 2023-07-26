@@ -176,7 +176,10 @@ class __TwigTemplate_d2e2eb9d2a5e7e65289a42f3f985b6bfa6328dbfdf66a4a91eadf282944
             // line 24
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("task_creation");
             echo "\">Crear tareas</a></li>
-                <li><a href=\"\">Mis tareas</a></li>
+                <li><a href=\"";
+            // line 25
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("my_tasks");
+            echo "\">Mis tareas</a></li>
                
 
 <li class=\"right\"><a href=\"";
@@ -243,7 +246,7 @@ class __TwigTemplate_d2e2eb9d2a5e7e65289a42f3f985b6bfa6328dbfdf66a4a91eadf282944
 
     public function getDebugInfo()
     {
-        return array (  229 => 43,  219 => 42,  204 => 35,  199 => 33,  194 => 32,  188 => 29,  184 => 28,  177 => 24,  172 => 23,  170 => 22,  164 => 18,  154 => 17,  144 => 14,  142 => 13,  132 => 12,  119 => 8,  109 => 7,  90 => 5,  78 => 45,  76 => 42,  73 => 41,  71 => 17,  67 => 15,  65 => 12,  61 => 10,  59 => 7,  54 => 5,  48 => 1,);
+        return array (  232 => 43,  222 => 42,  207 => 35,  202 => 33,  197 => 32,  191 => 29,  187 => 28,  181 => 25,  177 => 24,  172 => 23,  170 => 22,  164 => 18,  154 => 17,  144 => 14,  142 => 13,  132 => 12,  119 => 8,  109 => 7,  90 => 5,  78 => 45,  76 => 42,  73 => 41,  71 => 17,  67 => 15,  65 => 12,  61 => 10,  59 => 7,  54 => 5,  48 => 1,);
     }
 
     public function getSourceContext()
@@ -272,7 +275,7 @@ class __TwigTemplate_d2e2eb9d2a5e7e65289a42f3f985b6bfa6328dbfdf66a4a91eadf282944
             {% if app.user %}
                 <li><a href=\"{{ path('tasks') }}\">Inicio</a></li>
                 <li><a href=\"{{path('task_creation')}}\">Crear tareas</a></li>
-                <li><a href=\"\">Mis tareas</a></li>
+                <li><a href=\"{{path('my_tasks')}}\">Mis tareas</a></li>
                
 
 <li class=\"right\"><a href=\"{{ path('logout')}}\">Cerrar cesión</a></li>
