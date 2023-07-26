@@ -17,6 +17,8 @@ return [
     '_profiler_exception_css' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::stylesheet'], [], [['text', '/exception.css'], ['variable', '/', '[^/]++', 'token'], ['text', '/_profiler']], [], []],
     'app_user' => [[], ['_controller' => 'App\\Controller\\UserController::register'], [], [['text', '/user']], [], []],
     'tasks' => [[], ['_controller' => 'App\\Controller\\TaskController::index'], [], [['text', '/']], [], []],
+    'task_detail' => [['id'], ['_controller' => 'App\\Controller\\TaskController::detail'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/tarea']], [], []],
+    'task_creation' => [[], ['_controller' => 'App\\Controller\\TaskController::creation'], [], [['text', '/crear-tarea']], [], []],
     'register' => [[], ['_controller' => 'App\\Controller\\UserController::register'], [], [['text', '/registro']], [], []],
     'login' => [[], ['_controller' => 'App\\Controller\\UserController::login'], [], [['text', '/login']], [], []],
     'logout' => [[], [], [], [['text', '/logout']], [], []],

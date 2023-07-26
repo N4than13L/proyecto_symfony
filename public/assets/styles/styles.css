@@ -99,3 +99,44 @@ input[type="submit"]:hover {
   float: right !important;
   border-left: 1px solid #ccc;
 }
+
+table {
+  width: 100%;
+}
+
+table th,
+table td {
+  padding: 15px;
+  padding-right: 25px;
+  padding-left: 25px;
+  border-bottom: 1px solid #444;
+  background-color: antiquewhite;
+  text-align: center;
+}
+
+table td {
+  background-color: rgb(125, 223, 130);
+}
+
+.buttons a {
+  text-decoration: none;
+  border: 1px solid #444;
+  padding: 5px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  color: white;
+  background-color: yellowgreen;
+  display: flex;
+}
+
+.buttons .btn_ver {
+  background-color: rgb(158, 206, 63);
+}
+
+.buttons .btn_editar {
+  background-color: rgb(222, 211, 67);
+}
+
+.buttons .btn_eliminar {
+  background-color: rgb(207, 32, 32);
+}

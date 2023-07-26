@@ -5276,6 +5276,12 @@
         <argument>make:migration</argument>
       </call>
     </service>
+    <service id=".service_locator.INem9Yq" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="task" type="service_closure" id=".errored..service_locator.INem9Yq.App\Entity\Task"/>
+      </argument>
+    </service>
     <service id=".service_locator.jmvbEvf" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -5288,11 +5294,13 @@
         <argument key="authenticationUtils" type="service_closure" id="security.authentication_utils"/>
       </argument>
     </service>
-    <service id=".service_locator.DtJGCUw" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.ytevjms" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
+        <argument key="App\Controller\TaskController::detail" type="service_closure" id=".service_locator.INem9Yq"/>
         <argument key="App\Controller\UserController::login" type="service_closure" id=".service_locator.g.xob4v"/>
         <argument key="App\Controller\UserController::register" type="service_closure" id=".service_locator.jmvbEvf"/>
+        <argument key="App\Controller\TaskController:detail" type="service_closure" id=".service_locator.INem9Yq"/>
         <argument key="App\Controller\UserController:login" type="service_closure" id=".service_locator.g.xob4v"/>
         <argument key="App\Controller\UserController:register" type="service_closure" id=".service_locator.jmvbEvf"/>
       </argument>
@@ -5739,12 +5747,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.DtJGCUw"/>
+      <argument type="service" id=".service_locator.ytevjms"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver" public="false">
-      <argument type="service" id=".service_locator.DtJGCUw"/>
+      <argument type="service" id=".service_locator.ytevjms"/>
     </service>
     <service id=".debug.http_client.inner" class="Symfony\Contracts\HttpClient\HttpClientInterface" public="false">
       <argument type="collection"/>
@@ -5754,6 +5762,7 @@
       </call>
       <factory class="Symfony\Component\HttpClient\HttpClient" method="create"/>
     </service>
+    <service id=".errored..service_locator.INem9Yq.App\Entity\Task" class="App\Entity\Task"/>
     <service id="console.command_loader" class="Symfony\Component\Console\CommandLoader\ContainerCommandLoader" public="true">
       <argument type="service" id=".service_locator.6dPBBj6"/>
       <argument type="collection">
@@ -6135,7 +6144,7 @@
     <service id="Symfony\Component\Security\Core\User\UserCheckerInterface" alias="security.user_checker" public="false"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.CmORmuK" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem" public="false"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.DtJGCUw"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.ytevjms"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
     <service id="Psr\Log\LoggerInterface $consoleLogger" alias="monolog.logger.console"/>

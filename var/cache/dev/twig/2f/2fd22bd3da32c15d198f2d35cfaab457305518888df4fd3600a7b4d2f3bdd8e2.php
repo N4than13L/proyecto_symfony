@@ -91,22 +91,52 @@ class __TwigTemplate_3bdc2be59ce18f5e0a204b3b7701929aea1aac6183f22d321a0fc92b461
 </style>
 
 <div class=\"example-wrapper\">
-    <h1>Hello ";
-        // line 12
-        echo twig_escape_filter($this->env, (isset($context["controller_name"]) || array_key_exists("controller_name", $context) ? $context["controller_name"] : (function () { throw new RuntimeError('Variable "controller_name" does not exist.', 12, $this->source); })()), "html", null, true);
-        echo "! ✅</h1>
+    <h2>Todas las tareas ✅</h2>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href=\"";
-        // line 16
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\CodeExtension']->getFileLink("C:/wamp64/www/proyecto-symfony/src/Controller/TaskController.php", 0), "html", null, true);
-        echo "\">src/Controller/TaskController.php</a></code></li>
-        <li>Your template at <code><a href=\"";
-        // line 17
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\CodeExtension']->getFileLink("C:/wamp64/www/proyecto-symfony/templates/task/index.html.twig", 0), "html", null, true);
-        echo "\">templates/task/index.html.twig</a></code></li>
-    </ul>
+    <table>
+        <tr>
+            <th>Tareas</th>
+            <th>Prioridad</th>
+            <th>Horas presupuestadas</th>
+            <th>Acciones</th>
+        </tr>
+
+        ";
+        // line 22
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["tasks"]) || array_key_exists("tasks", $context) ? $context["tasks"] : (function () { throw new RuntimeError('Variable "tasks" does not exist.', 22, $this->source); })()));
+        foreach ($context['_seq'] as $context["_key"] => $context["task"]) {
+            // line 23
+            echo "            <tr>
+                <td>";
+            // line 24
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["task"], "title", [], "any", false, false, false, 24), "html", null, true);
+            echo "</td>
+                <td>";
+            // line 25
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["task"], "priority", [], "any", false, false, false, 25), "html", null, true);
+            echo "</td>
+                <td>";
+            // line 26
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["task"], "hours", [], "any", false, false, false, 26), "html", null, true);
+            echo "</td>
+                <td class=\"buttons\">
+                    <a href=\"";
+            // line 28
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("task_detail", ["id" => twig_get_attribute($this->env, $this->source, $context["task"], "id", [], "any", false, false, false, 28)]), "html", null, true);
+            echo "\" class=\"btn_ver\">Ver</a>
+                    <a href=\"#\" class=\"btn_editar\">Editar</a>
+                    <a href=\"#\" class=\"btn_eliminar\">Eliminar</a>
+                </td>
+            </tr>
+        ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['task'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 34
+        echo "
+    </table>
 </div>
 ";
         
@@ -129,7 +159,7 @@ class __TwigTemplate_3bdc2be59ce18f5e0a204b3b7701929aea1aac6183f22d321a0fc92b461
 
     public function getDebugInfo()
     {
-        return array (  107 => 17,  103 => 16,  96 => 12,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  138 => 34,  126 => 28,  121 => 26,  117 => 25,  113 => 24,  110 => 23,  106 => 22,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -145,13 +175,30 @@ class __TwigTemplate_3bdc2be59ce18f5e0a204b3b7701929aea1aac6183f22d321a0fc92b461
 </style>
 
 <div class=\"example-wrapper\">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+    <h2>Todas las tareas ✅</h2>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href=\"{{ 'C:/wamp64/www/proyecto-symfony/src/Controller/TaskController.php'|file_link(0) }}\">src/Controller/TaskController.php</a></code></li>
-        <li>Your template at <code><a href=\"{{ 'C:/wamp64/www/proyecto-symfony/templates/task/index.html.twig'|file_link(0) }}\">templates/task/index.html.twig</a></code></li>
-    </ul>
+    <table>
+        <tr>
+            <th>Tareas</th>
+            <th>Prioridad</th>
+            <th>Horas presupuestadas</th>
+            <th>Acciones</th>
+        </tr>
+
+        {%  for task in tasks %}
+            <tr>
+                <td>{{ task.title }}</td>
+                <td>{{ task.priority }}</td>
+                <td>{{ task.hours }}</td>
+                <td class=\"buttons\">
+                    <a href=\"{{ path('task_detail', {'id':task.id}) }}\" class=\"btn_ver\">Ver</a>
+                    <a href=\"#\" class=\"btn_editar\">Editar</a>
+                    <a href=\"#\" class=\"btn_eliminar\">Eliminar</a>
+                </td>
+            </tr>
+        {% endfor %}
+
+    </table>
 </div>
 {% endblock %}
 ", "task/index.html.twig", "C:\\wamp64\\www\\proyecto-symfony\\templates\\task\\index.html.twig");

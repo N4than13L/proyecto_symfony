@@ -305,7 +305,7 @@ class User extends \App\Entity\User implements \Doctrine\ORM\Proxy\Proxy
     /**
      * {@inheritDoc}
      */
-    public function getCreatedAt(): ?\DateTimeInterface
+    public function getCreatedAt()
     {
 
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'getCreatedAt', []);
@@ -316,7 +316,7 @@ class User extends \App\Entity\User implements \Doctrine\ORM\Proxy\Proxy
     /**
      * {@inheritDoc}
      */
-    public function setCreatedAt(?\DateTimeInterface $createdAt): \App\Entity\User
+    public function setCreatedAt($createdAt): \App\Entity\User
     {
 
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'setCreatedAt', [$createdAt]);
@@ -327,12 +327,56 @@ class User extends \App\Entity\User implements \Doctrine\ORM\Proxy\Proxy
     /**
      * {@inheritDoc}
      */
-    public function getTask(): \Doctrine\Common\Collections\Collection
+    public function getTasks(): \Doctrine\Common\Collections\Collection
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getTask', []);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getTasks', []);
 
-        return parent::getTask();
+        return parent::getTasks();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getUsername()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getUsername', []);
+
+        return parent::getUsername();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getSalt()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getSalt', []);
+
+        return parent::getSalt();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getRoles()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getRoles', []);
+
+        return parent::getRoles();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function eraseCredentials()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'eraseCredentials', []);
+
+        return parent::eraseCredentials();
     }
 
 }

@@ -15,6 +15,7 @@ return [
         '/_profiler/open' => [[['_route' => '_profiler_open_file', '_controller' => 'web_profiler.controller.profiler::openAction'], null, null, null, false, false, null]],
         '/user' => [[['_route' => 'app_user', '_controller' => 'App\\Controller\\UserController::register'], null, null, null, false, false, null]],
         '/' => [[['_route' => 'tasks', '_controller' => 'App\\Controller\\TaskController::index'], null, null, null, false, false, null]],
+        '/crear-tarea' => [[['_route' => 'task_creation', '_controller' => 'App\\Controller\\TaskController::creation'], null, null, null, false, false, null]],
         '/registro' => [[['_route' => 'register', '_controller' => 'App\\Controller\\UserController::register'], null, null, null, false, false, null]],
         '/login' => [[['_route' => 'login', '_controller' => 'App\\Controller\\UserController::login'], null, null, null, false, false, null]],
         '/logout' => [[['_route' => 'logout'], null, null, null, false, false, null]],
@@ -36,6 +37,7 @@ return [
                         .'|(*:159)'
                     .')'
                 .')'
+                .'|/tarea/([^/]++)(*:184)'
             .')/?$}sD',
     ],
     [ // $dynamicRoutes
@@ -45,8 +47,9 @@ return [
         116 => [[['_route' => '_profiler_router', '_controller' => 'web_profiler.controller.router::panelAction'], ['token'], null, null, false, false, null]],
         136 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception_panel::body'], ['token'], null, null, false, false, null]],
         149 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
-        159 => [
-            [['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null],
+        159 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
+        184 => [
+            [['_route' => 'task_detail', '_controller' => 'App\\Controller\\TaskController::detail'], ['id'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
     ],

@@ -9,12 +9,29 @@
 </style>
 
 <div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+    <h2>Todas las tareas ✅</h2>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/wamp64/www/proyecto-symfony/src/Controller/TaskController.php'|file_link(0) }}">src/Controller/TaskController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/wamp64/www/proyecto-symfony/templates/task/index.html.twig'|file_link(0) }}">templates/task/index.html.twig</a></code></li>
-    </ul>
+    <table>
+        <tr>
+            <th>Tareas</th>
+            <th>Prioridad</th>
+            <th>Horas presupuestadas</th>
+            <th>Acciones</th>
+        </tr>
+
+        {%  for task in tasks %}
+            <tr>
+                <td>{{ task.title }}</td>
+                <td>{{ task.priority }}</td>
+                <td>{{ task.hours }}</td>
+                <td class="buttons">
+                    <a href="{{ path('task_detail', {'id':task.id}) }}" class="btn_ver">Ver</a>
+                    <a href="#" class="btn_editar">Editar</a>
+                    <a href="#" class="btn_eliminar">Eliminar</a>
+                </td>
+            </tr>
+        {% endfor %}
+
+    </table>
 </div>
 {% endblock %}

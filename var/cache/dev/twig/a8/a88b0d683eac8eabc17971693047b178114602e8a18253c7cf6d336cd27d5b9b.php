@@ -69,12 +69,12 @@ class __TwigTemplate_d2e2eb9d2a5e7e65289a42f3f985b6bfa6328dbfdf66a4a91eadf282944
         ";
         // line 17
         $this->displayBlock('header', $context, $blocks);
-        // line 47
+        // line 41
         echo "
         ";
-        // line 48
+        // line 42
         $this->displayBlock('body', $context, $blocks);
-        // line 51
+        // line 45
         echo "    </body>
 </html>
 ";
@@ -165,55 +165,45 @@ class __TwigTemplate_d2e2eb9d2a5e7e65289a42f3f985b6bfa6328dbfdf66a4a91eadf282944
             <h1>Tareas symfony</h1>
             <ul id=\"menu\">
                
-
             ";
-        // line 23
-        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 23, $this->source); })()), "user", [], "any", false, false, false, 23)) {
-            // line 24
+        // line 22
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 22, $this->source); })()), "user", [], "any", false, false, false, 22)) {
+            // line 23
             echo "                <li><a href=\"";
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("tasks");
             echo "\">Inicio</a></li>
-                <li><a href=\"#\">Mis tareas</a></li>
+                <li><a href=\"";
+            // line 24
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("task_creation");
+            echo "\">Crear tareas</a></li>
+                <li><a href=\"\">Mis tareas</a></li>
+               
 
 <li class=\"right\"><a href=\"";
-            // line 27
+            // line 28
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("logout");
             echo "\">Cerrar cesión</a></li>
                 <li class=\"right\"><a href=\"#\">";
-            // line 28
-            echo twig_escape_filter($this->env, ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 28, $this->source); })()), "user", [], "any", false, false, false, 28), "name", [], "any", false, false, false, 28) . " ") . twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 28, $this->source); })()), "user", [], "any", false, false, false, 28), "surname", [], "any", false, false, false, 28)), "html", null, true);
-            echo "</a></li>
-
-                
+            // line 29
+            echo twig_escape_filter($this->env, ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 29, $this->source); })()), "user", [], "any", false, false, false, 29), "name", [], "any", false, false, false, 29) . " ") . twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 29, $this->source); })()), "user", [], "any", false, false, false, 29), "surname", [], "any", false, false, false, 29)), "html", null, true);
+            echo "</a></li> 
                     
             ";
         } else {
-            // line 33
+            // line 32
             echo "                <li><a href=\"";
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("login");
             echo "\">Login</a></li>
                 <li><a href=\"";
-            // line 34
+            // line 33
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("register");
             echo "\">Registro</a></li>
             ";
         }
-        // line 36
+        // line 35
         echo "
             </ul>
-            </div>
-            
-   ";
-        // line 40
-        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 40, $this->source); })()), "user", [], "any", false, false, false, 40)) {
-            // line 41
-            echo "        ";
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\DumpExtension']->dump($this->env, $context, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 41, $this->source); })()), "user", [], "any", false, false, false, 41));
-            echo "
-    ";
-        }
-        // line 43
-        echo "    
+            </div>  
 
             <div class=\"clearfix\"></div>
         ";
@@ -225,7 +215,7 @@ class __TwigTemplate_d2e2eb9d2a5e7e65289a42f3f985b6bfa6328dbfdf66a4a91eadf282944
 
     }
 
-    // line 48
+    // line 42
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -235,7 +225,7 @@ class __TwigTemplate_d2e2eb9d2a5e7e65289a42f3f985b6bfa6328dbfdf66a4a91eadf282944
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 49
+        // line 43
         echo "        
         ";
         
@@ -253,7 +243,7 @@ class __TwigTemplate_d2e2eb9d2a5e7e65289a42f3f985b6bfa6328dbfdf66a4a91eadf282944
 
     public function getDebugInfo()
     {
-        return array (  239 => 49,  229 => 48,  216 => 43,  210 => 41,  208 => 40,  202 => 36,  197 => 34,  192 => 33,  184 => 28,  180 => 27,  173 => 24,  171 => 23,  164 => 18,  154 => 17,  144 => 14,  142 => 13,  132 => 12,  119 => 8,  109 => 7,  90 => 5,  78 => 51,  76 => 48,  73 => 47,  71 => 17,  67 => 15,  65 => 12,  61 => 10,  59 => 7,  54 => 5,  48 => 1,);
+        return array (  229 => 43,  219 => 42,  204 => 35,  199 => 33,  194 => 32,  188 => 29,  184 => 28,  177 => 24,  172 => 23,  170 => 22,  164 => 18,  154 => 17,  144 => 14,  142 => 13,  132 => 12,  119 => 8,  109 => 7,  90 => 5,  78 => 45,  76 => 42,  73 => 41,  71 => 17,  67 => 15,  65 => 12,  61 => 10,  59 => 7,  54 => 5,  48 => 1,);
     }
 
     public function getSourceContext()
@@ -279,15 +269,14 @@ class __TwigTemplate_d2e2eb9d2a5e7e65289a42f3f985b6bfa6328dbfdf66a4a91eadf282944
             <h1>Tareas symfony</h1>
             <ul id=\"menu\">
                
-
             {% if app.user %}
                 <li><a href=\"{{ path('tasks') }}\">Inicio</a></li>
-                <li><a href=\"#\">Mis tareas</a></li>
+                <li><a href=\"{{path('task_creation')}}\">Crear tareas</a></li>
+                <li><a href=\"\">Mis tareas</a></li>
+               
 
 <li class=\"right\"><a href=\"{{ path('logout')}}\">Cerrar cesión</a></li>
-                <li class=\"right\"><a href=\"#\">{{app.user.name ~ ' ' ~ app.user.surname}}</a></li>
-
-                
+                <li class=\"right\"><a href=\"#\">{{app.user.name ~ ' ' ~ app.user.surname}}</a></li> 
                     
             {% else %}
                 <li><a href=\"{{ path('login') }}\">Login</a></li>
@@ -295,12 +284,7 @@ class __TwigTemplate_d2e2eb9d2a5e7e65289a42f3f985b6bfa6328dbfdf66a4a91eadf282944
             {% endif %}
 
             </ul>
-            </div>
-            
-   {% if app.user %}
-        {{dump(app.user)}}
-    {% endif %}
-    
+            </div>  
 
             <div class=\"clearfix\"></div>
         {% endblock %}

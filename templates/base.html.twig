@@ -19,15 +19,14 @@
             <h1>Tareas symfony</h1>
             <ul id="menu">
                
-
             {% if app.user %}
                 <li><a href="{{ path('tasks') }}">Inicio</a></li>
-                <li><a href="#">Mis tareas</a></li>
+                <li><a href="{{path('task_creation')}}">Crear tareas</a></li>
+                <li><a href="">Mis tareas</a></li>
+               
 
 <li class="right"><a href="{{ path('logout')}}">Cerrar cesión</a></li>
-                <li class="right"><a href="#">{{app.user.name ~ ' ' ~ app.user.surname}}</a></li>
-
-                
+                <li class="right"><a href="#">{{app.user.name ~ ' ' ~ app.user.surname}}</a></li> 
                     
             {% else %}
                 <li><a href="{{ path('login') }}">Login</a></li>
@@ -35,12 +34,7 @@
             {% endif %}
 
             </ul>
-            </div>
-            
-   {% if app.user %}
-        {{dump(app.user)}}
-    {% endif %}
-    
+            </div>  
 
             <div class="clearfix"></div>
         {% endblock %}
